@@ -1,0 +1,47 @@
+{
+  "name": "react-feather",
+  "version": "1.0.0",
+  "description": "React component for Feather icons",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ./bin/build && babel src --out-dir dist --ignore 'src/feather'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carmelopullara/react-feather.git"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "inline",
+    "feather",
+    "design"
+  ],
+  "author": "Carmelo Pullara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carmelopullara/react-feather/issues"
+  },
+  "homepage": "https://github.com/carmelopullara/react-feather#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "camelcase": "^4.1.0",
+    "cheerio": "^1.0.0-rc.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.0.1",
+    "glob": "^7.1.2",
+    "prettier": "^1.4.4",
+    "uppercamelcase": "^3.0.0"
+  }
+}
