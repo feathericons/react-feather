@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/carmelopullara/react-feather#readme",
   "devDependencies": {
-    "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-plugin-add-module-exports": "^0.2.1",
