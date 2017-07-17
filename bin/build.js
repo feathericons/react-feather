@@ -8,7 +8,7 @@ const prettier = require('prettier');
 
 const rootDir = path.join(__dirname, '..');
 
-glob(`${rootDir}/src/feather/icons/*/*.svg`, (err, icons) => {
+glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
   fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
 
   icons.forEach((i) => {
