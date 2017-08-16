@@ -28,7 +28,7 @@ const Italic = props => {
         x2="5"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const Italic = props => {
         x2="9"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

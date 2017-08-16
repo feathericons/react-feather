@@ -28,7 +28,7 @@ const List = props => {
         x2="21"
         y2="12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const List = props => {
         x2="21"
         y2="18"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -50,7 +50,7 @@ const List = props => {
         x2="3"
         y2="6"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -61,7 +61,7 @@ const List = props => {
         x2="3"
         y2="12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -72,7 +72,7 @@ const List = props => {
         x2="3"
         y2="18"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"

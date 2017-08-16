@@ -22,7 +22,7 @@ const PieChart = props => {
       <path
         d="M22 12A10 10 0 0 0 12 2v10z"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

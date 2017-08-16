@@ -22,7 +22,7 @@ const CloudLightning = props => {
       <polyline
         points="13 11 9 17 15 17 11 23"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

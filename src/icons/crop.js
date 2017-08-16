@@ -22,7 +22,7 @@ const Crop = props => {
       <path
         d="M1,6.13,16,6a2,2,0,0,1,2,2V23"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

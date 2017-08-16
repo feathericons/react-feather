@@ -22,7 +22,7 @@ const Wifi = props => {
       <path
         d="M1.42,9A16,16,0,0,1,22.58,9"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -30,7 +30,7 @@ const Wifi = props => {
       <path
         d="M8.53,16.11a6,6,0,0,1,6.95,0"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -41,7 +41,7 @@ const Wifi = props => {
         x2="12"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"

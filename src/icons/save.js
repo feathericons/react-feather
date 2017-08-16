@@ -22,7 +22,7 @@ const Save = props => {
       <polyline
         points="17 21 17 13 7 13 7 21"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -30,7 +30,7 @@ const Save = props => {
       <polyline
         points="7 3 7 8 15 8"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

@@ -32,7 +32,7 @@ const Server = props => {
         rx="2"
         ry="2"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -43,7 +43,7 @@ const Server = props => {
         x2="6"
         y2="6"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -54,7 +54,7 @@ const Server = props => {
         x2="6"
         y2="18"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

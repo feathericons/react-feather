@@ -28,7 +28,7 @@ const Pause = props => {
         width="4"
         height="16"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

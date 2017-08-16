@@ -22,7 +22,7 @@ const TrendingUp = props => {
       <polyline
         points="17 6 23 6 23 12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

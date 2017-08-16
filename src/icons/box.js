@@ -22,7 +22,7 @@ const Box = props => {
       <polyline
         points="2.32 6.16 12 11 21.68 6.16"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -33,7 +33,7 @@ const Box = props => {
         x2="12"
         y2="11"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

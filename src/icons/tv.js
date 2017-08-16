@@ -27,7 +27,7 @@ const Tv = props => {
       <polyline
         points="17 2 12 7 7 2"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

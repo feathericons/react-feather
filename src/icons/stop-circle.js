@@ -27,7 +27,7 @@ const StopCircle = props => {
         width="6"
         height="6"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

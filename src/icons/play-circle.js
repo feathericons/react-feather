@@ -24,7 +24,7 @@ const PlayCircle = props => {
       <polygon
         points="10 8 16 12 10 16 10 8"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

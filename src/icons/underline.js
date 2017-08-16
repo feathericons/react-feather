@@ -25,7 +25,7 @@ const Underline = props => {
         x2="20"
         y2="21"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

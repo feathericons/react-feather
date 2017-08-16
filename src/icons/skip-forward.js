@@ -25,7 +25,7 @@ const SkipForward = props => {
         x2="19"
         y2="19"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

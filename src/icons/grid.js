@@ -28,7 +28,7 @@ const Grid = props => {
         width="7"
         height="7"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const Grid = props => {
         width="7"
         height="7"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -50,7 +50,7 @@ const Grid = props => {
         width="7"
         height="7"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

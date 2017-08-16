@@ -25,7 +25,7 @@ const Type = props => {
         x2="15"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -36,7 +36,7 @@ const Type = props => {
         x2="12"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

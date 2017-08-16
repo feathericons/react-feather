@@ -22,7 +22,7 @@ const CornerUpLeft = props => {
       <path
         d="M20 20v-7a4 4 0 0 0-4-4H4"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

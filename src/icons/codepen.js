@@ -25,7 +25,7 @@ const Codepen = props => {
         x2="12"
         y2="15.5"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -33,7 +33,7 @@ const Codepen = props => {
       <polyline
         points="22 8.5 12 15.5 2 8.5"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -41,7 +41,7 @@ const Codepen = props => {
       <polyline
         points="2 15.5 12 8.5 22 15.5"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -52,7 +52,7 @@ const Codepen = props => {
         x2="12"
         y2="8.5"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

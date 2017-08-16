@@ -24,7 +24,7 @@ const UserX = props => {
         cy="7"
         r="4"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -35,7 +35,7 @@ const UserX = props => {
         x2="23"
         y2="13"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -46,7 +46,7 @@ const UserX = props => {
         x2="18"
         y2="13"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

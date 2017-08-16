@@ -25,7 +25,7 @@ const BatteryCharging = props => {
         x2="23"
         y2="11"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -33,7 +33,7 @@ const BatteryCharging = props => {
       <polyline
         points="11 6 7 12 13 12 9 18"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

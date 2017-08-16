@@ -24,7 +24,7 @@ const UserCheck = props => {
         cy="7"
         r="4"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -32,7 +32,7 @@ const UserCheck = props => {
       <polyline
         points="17 11 19 13 23 9"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

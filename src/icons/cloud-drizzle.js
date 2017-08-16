@@ -28,7 +28,7 @@ const CloudDrizzle = props => {
         x2="8"
         y2="15"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const CloudDrizzle = props => {
         x2="16"
         y2="21"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -50,7 +50,7 @@ const CloudDrizzle = props => {
         x2="16"
         y2="15"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -61,7 +61,7 @@ const CloudDrizzle = props => {
         x2="12"
         y2="23"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -72,7 +72,7 @@ const CloudDrizzle = props => {
         x2="12"
         y2="17"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -80,7 +80,7 @@ const CloudDrizzle = props => {
       <path
         d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

@@ -30,7 +30,7 @@ const Film = props => {
         x2="7"
         y2="22"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -41,7 +41,7 @@ const Film = props => {
         x2="17"
         y2="22"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -52,7 +52,7 @@ const Film = props => {
         x2="22"
         y2="12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -63,7 +63,7 @@ const Film = props => {
         x2="7"
         y2="7"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -74,7 +74,7 @@ const Film = props => {
         x2="7"
         y2="17"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -85,7 +85,7 @@ const Film = props => {
         x2="22"
         y2="17"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -96,7 +96,7 @@ const Film = props => {
         x2="22"
         y2="7"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

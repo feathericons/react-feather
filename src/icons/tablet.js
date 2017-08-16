@@ -31,7 +31,7 @@ const Tablet = props => {
         x2="12"
         y2="18"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

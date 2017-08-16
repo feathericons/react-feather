@@ -25,7 +25,7 @@ const VolumeX = props => {
         x2="17"
         y2="15"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -36,7 +36,7 @@ const VolumeX = props => {
         x2="23"
         y2="15"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

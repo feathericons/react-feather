@@ -24,7 +24,7 @@ const HelpCircle = props => {
         cy="12"
         r="10"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -35,7 +35,7 @@ const HelpCircle = props => {
         x2="12"
         y2="17"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

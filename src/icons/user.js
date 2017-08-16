@@ -24,7 +24,7 @@ const User = props => {
         cy="7"
         r="4"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

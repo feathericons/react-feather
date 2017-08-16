@@ -25,7 +25,7 @@ const CloudSnow = props => {
         x2="8"
         y2="16"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -36,7 +36,7 @@ const CloudSnow = props => {
         x2="8"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -47,7 +47,7 @@ const CloudSnow = props => {
         x2="12"
         y2="18"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -58,7 +58,7 @@ const CloudSnow = props => {
         x2="12"
         y2="22"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -69,7 +69,7 @@ const CloudSnow = props => {
         x2="16"
         y2="16"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -80,7 +80,7 @@ const CloudSnow = props => {
         x2="16"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

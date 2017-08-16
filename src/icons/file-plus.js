@@ -22,7 +22,7 @@ const FilePlus = props => {
       <polyline
         points="14 2 14 8 20 8"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -33,7 +33,7 @@ const FilePlus = props => {
         x2="12"
         y2="12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -44,7 +44,7 @@ const FilePlus = props => {
         x2="15"
         y2="15"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

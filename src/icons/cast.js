@@ -25,7 +25,7 @@ const Cast = props => {
         x2="2"
         y2="20"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

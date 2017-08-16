@@ -24,7 +24,7 @@ const Slack = props => {
         x2="16.15"
         y2="16.39"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -35,7 +35,7 @@ const Slack = props => {
         x2="11.43"
         y2="18.01"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -46,7 +46,7 @@ const Slack = props => {
         x2="5.99"
         y2="11.43"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"
@@ -57,7 +57,7 @@ const Slack = props => {
         x2="7.61"
         y2="16.15"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
         strokeWidth="2"

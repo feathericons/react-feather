@@ -25,7 +25,7 @@ const Shuffle = props => {
         x2="21"
         y2="3"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -33,7 +33,7 @@ const Shuffle = props => {
       <polyline
         points="21 16 21 21 16 21"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -44,7 +44,7 @@ const Shuffle = props => {
         x2="21"
         y2="21"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -55,7 +55,7 @@ const Shuffle = props => {
         x2="9"
         y2="9"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

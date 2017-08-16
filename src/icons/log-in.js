@@ -22,7 +22,7 @@ const LogIn = props => {
       <polyline
         points="11 16 15 12 11 8"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -33,7 +33,7 @@ const LogIn = props => {
         x2="3"
         y2="12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

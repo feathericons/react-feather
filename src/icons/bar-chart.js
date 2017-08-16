@@ -28,7 +28,7 @@ const BarChart = props => {
         width="4"
         height="13"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -39,7 +39,7 @@ const BarChart = props => {
         width="4"
         height="8"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

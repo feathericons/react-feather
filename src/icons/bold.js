@@ -22,7 +22,7 @@ const Bold = props => {
       <path
         d="M6,12h9a4,4,0,0,1,4,4h0a4,4,0,0,1-4,4H6Z"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

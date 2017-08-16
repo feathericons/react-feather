@@ -25,7 +25,7 @@ const ArrowDownLeft = props => {
       <polyline
         points="15 18 6 18 6 9"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

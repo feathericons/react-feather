@@ -25,7 +25,7 @@ const Link2 = props => {
         x2="16"
         y2="12"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

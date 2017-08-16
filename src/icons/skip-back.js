@@ -25,7 +25,7 @@ const SkipBack = props => {
         x2="5"
         y2="5"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

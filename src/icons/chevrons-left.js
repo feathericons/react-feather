@@ -22,7 +22,7 @@ const ChevronsLeft = props => {
       <polyline
         points="18 17 13 12 18 7"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

@@ -29,7 +29,7 @@ const Speaker = props => {
         cy="14"
         r="4"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
@@ -40,7 +40,7 @@ const Speaker = props => {
         x2="12"
         y2="6"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

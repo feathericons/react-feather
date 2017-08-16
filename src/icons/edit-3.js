@@ -25,7 +25,7 @@ const Edit3 = props => {
         x2="21"
         y2="22"
         fill="none"
-        stroke="currentColor"
+        stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"
