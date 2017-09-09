@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Box = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Box = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <polyline
         points="2.32 6.16 12 11 21.68 6.16"
@@ -25,7 +25,7 @@ const Box = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="12"
@@ -36,7 +36,7 @@ const Box = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -45,11 +45,13 @@ const Box = props => {
 Box.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Box.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default Box;

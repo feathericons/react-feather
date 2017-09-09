@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Link2 = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Link2 = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="8"
@@ -28,7 +28,7 @@ const Link2 = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -37,11 +37,13 @@ const Link2 = props => {
 Link2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Link2.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default Link2;

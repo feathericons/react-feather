@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Underline = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Underline = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="4"
@@ -28,7 +28,7 @@ const Underline = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -37,11 +37,13 @@ const Underline = props => {
 Underline.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Underline.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default Underline;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Share = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const Share = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <polyline
         points="16 6 12 2 8 6"
@@ -25,7 +25,7 @@ const Share = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="12"
@@ -36,7 +36,7 @@ const Share = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -45,11 +45,13 @@ const Share = props => {
 Share.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Share.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default Share;

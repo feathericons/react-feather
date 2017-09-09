@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Navigation = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ const Navigation = props => {
         fill="none"
         stroke={color}
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -25,11 +25,13 @@ const Navigation = props => {
 Navigation.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Navigation.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default Navigation;

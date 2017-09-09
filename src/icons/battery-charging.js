@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const BatteryCharging = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ const BatteryCharging = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="23"
@@ -28,7 +28,7 @@ const BatteryCharging = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <polyline
         points="11 6 7 12 13 12 9 18"
@@ -36,7 +36,7 @@ const BatteryCharging = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -45,11 +45,13 @@ const BatteryCharging = props => {
 BatteryCharging.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 BatteryCharging.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default BatteryCharging;

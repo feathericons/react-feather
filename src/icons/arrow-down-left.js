@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArrowDownLeft = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const ArrowDownLeft = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <polyline
         points="15 18 6 18 6 9"
@@ -28,7 +28,7 @@ const ArrowDownLeft = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -37,11 +37,13 @@ const ArrowDownLeft = props => {
 ArrowDownLeft.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 ArrowDownLeft.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default ArrowDownLeft;

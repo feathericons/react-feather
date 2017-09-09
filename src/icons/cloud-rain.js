@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CloudRain = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const CloudRain = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="8"
@@ -31,7 +31,7 @@ const CloudRain = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="12"
@@ -42,7 +42,7 @@ const CloudRain = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <path
         d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"
@@ -50,7 +50,7 @@ const CloudRain = props => {
         stroke={color}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -59,11 +59,13 @@ const CloudRain = props => {
 CloudRain.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 CloudRain.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default CloudRain;

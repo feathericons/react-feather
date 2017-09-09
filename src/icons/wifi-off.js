@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const WifiOff = props => {
-  const { color, size, ...otherProps } = props;
+  const { color, size, strokeWidth, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <path
         d="M16.72,11.06A10.94,10.94,0,0,1,19,12.55"
@@ -28,7 +28,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <path
         d="M5,12.55a10.94,10.94,0,0,1,5.17-2.39"
@@ -36,7 +36,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <path
         d="M10.71,5.05A16,16,0,0,1,22.58,9"
@@ -44,7 +44,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <path
         d="M1.42,9a15.91,15.91,0,0,1,4.7-2.88"
@@ -52,7 +52,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <path
         d="M8.53,16.11a6,6,0,0,1,6.95,0"
@@ -60,7 +60,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
       <line
         x1="12"
@@ -71,7 +71,7 @@ const WifiOff = props => {
         stroke={color}
         strokeLinecap="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );
@@ -80,11 +80,13 @@ const WifiOff = props => {
 WifiOff.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 WifiOff.defaultProps = {
   color: 'currentColor',
   size: '24',
+  strokeWidth: '1',
 };
 
 export default WifiOff;
