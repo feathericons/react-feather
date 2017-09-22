@@ -21,7 +21,7 @@ class MyClass extends React.Component {
 ````
 If you can't use ES6 imports, it's possible to include icons from the compiled folder ./dist.
 ```javascript
-var Camera = require('react-feather/dist/icons/camera');
+var Camera = require('react-feather/dist/icons/camera').default;
 
 var MyComponent = React.createClass({
   render: function () {
