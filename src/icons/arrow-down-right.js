@@ -9,27 +9,15 @@ const ArrowDownRight = props => {
       width={size}
       height={size}
       viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <line
-        x1="6"
-        y1="6"
-        x2="18"
-        y2="18"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeMiterlimit="10"
-        strokeWidth="2"
-      />
-      <polyline
-        points="9 18 18 18 18 9"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
+      <line x1="7" y1="7" x2="17" y2="17" />
+      <polyline points="17 7 17 17 7 17" />
     </svg>
   );
 };

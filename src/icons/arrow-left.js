@@ -16,8 +16,8 @@ const ArrowLeft = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
-      <line x1="20" y1="12" x2="4" y2="12" />
-      <polyline points="10 18 4 12 10 6" />
+      <line x1="19" y1="12" x2="5" y2="12" />
+      <polyline points="12 19 5 12 12 5" />
     </svg>
   );
 };

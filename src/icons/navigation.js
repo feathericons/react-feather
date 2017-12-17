@@ -9,15 +9,14 @@ const Navigation = props => {
       width={size}
       height={size}
       viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <polygon
-        points="3 11 22 2 13 21 11 13 3 11"
-        fill="none"
-        stroke={color}
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
+      <polygon points="3 11 22 2 13 21 11 13 3 11" />
     </svg>
   );
 };

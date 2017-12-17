@@ -9,24 +9,15 @@ const CornerLeftDown = props => {
       width={size}
       height={size}
       viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <polyline
-        points="14 15 9 20 4 15"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
-      <path
-        d="M20 4h-7a4 4 0 0 0-4 4v12"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
+      <polyline points="14 15 9 20 4 15" />
+      <path d="M20 4h-7a4 4 0 0 0-4 4v12" />
     </svg>
   );
 };

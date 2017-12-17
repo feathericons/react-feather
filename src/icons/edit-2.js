@@ -9,16 +9,14 @@ const Edit2 = props => {
       width={size}
       height={size}
       viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
       {...otherProps}
     >
-      <polygon
-        points="16 3 21 8 8 21 3 21 3 16 16 3"
-        fill="none"
-        stroke={color}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-      />
+      <polygon points="16 3 21 8 8 21 3 21 3 16 16 3" />
     </svg>
   );
 };
