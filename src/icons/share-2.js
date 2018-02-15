@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Share2 = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Share2 = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="18" cy="5" r="3" />
       <circle cx="6" cy="12" r="3" />
       <circle cx="18" cy="19" r="3" />
@@ -26,11 +27,13 @@ const Share2 = props => {
 };
 
 Share2.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Share2.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

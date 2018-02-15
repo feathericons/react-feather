@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const MoreHorizontal = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const MoreHorizontal = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="12" cy="12" r="1" />
       <circle cx="19" cy="12" r="1" />
       <circle cx="5" cy="12" r="1" />
@@ -24,11 +25,13 @@ const MoreHorizontal = props => {
 };
 
 MoreHorizontal.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 MoreHorizontal.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

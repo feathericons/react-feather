@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DownloadCloud = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const DownloadCloud = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="8 17 12 21 16 17" />
       <line x1="12" y1="12" x2="12" y2="21" />
       <path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29" />
@@ -24,11 +25,13 @@ const DownloadCloud = props => {
 };
 
 DownloadCloud.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 DownloadCloud.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

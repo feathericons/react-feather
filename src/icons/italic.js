@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Italic = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Italic = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <line x1="19" y1="4" x2="10" y2="4" />
       <line x1="14" y1="20" x2="5" y2="20" />
       <line x1="15" y1="4" x2="9" y2="20" />
@@ -24,11 +25,13 @@ const Italic = props => {
 };
 
 Italic.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Italic.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ChevronsRight = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const ChevronsRight = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="13 17 18 12 13 7" />
       <polyline points="6 17 11 12 6 7" />
     </svg>
@@ -23,11 +24,13 @@ const ChevronsRight = props => {
 };
 
 ChevronsRight.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 ChevronsRight.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

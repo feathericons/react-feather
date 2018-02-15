@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const WifiOff = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const WifiOff = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <line x1="1" y1="1" x2="23" y2="23" />
       <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55" />
       <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39" />
@@ -28,11 +29,13 @@ const WifiOff = props => {
 };
 
 WifiOff.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 WifiOff.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const LifeBuoy = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const LifeBuoy = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="12" cy="12" r="10" />
       <circle cx="12" cy="12" r="4" />
       <line x1="4.93" y1="4.93" x2="9.17" y2="9.17" />
@@ -28,11 +29,13 @@ const LifeBuoy = props => {
 };
 
 LifeBuoy.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 LifeBuoy.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

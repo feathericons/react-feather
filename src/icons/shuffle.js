@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Shuffle = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Shuffle = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="16 3 21 3 21 8" />
       <line x1="4" y1="20" x2="21" y2="3" />
       <polyline points="21 16 21 21 16 21" />
@@ -26,11 +27,13 @@ const Shuffle = props => {
 };
 
 Shuffle.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Shuffle.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

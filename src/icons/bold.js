@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Bold = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Bold = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M6 4h8a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z" />
       <path d="M6 12h9a4 4 0 0 1 4 4 4 4 0 0 1-4 4H6z" />
     </svg>
@@ -23,11 +24,13 @@ const Bold = props => {
 };
 
 Bold.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Bold.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

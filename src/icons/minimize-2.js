@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Minimize2 = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Minimize2 = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="4 14 10 14 10 20" />
       <polyline points="20 10 14 10 14 4" />
       <line x1="14" y1="10" x2="21" y2="3" />
@@ -25,11 +26,13 @@ const Minimize2 = props => {
 };
 
 Minimize2.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Minimize2.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

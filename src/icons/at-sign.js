@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AtSign = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const AtSign = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="12" cy="12" r="4" />
       <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94" />
     </svg>
@@ -23,11 +24,13 @@ const AtSign = props => {
 };
 
 AtSign.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 AtSign.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SkipForward = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const SkipForward = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polygon points="5 4 15 12 5 20 5 4" />
       <line x1="19" y1="5" x2="19" y2="19" />
     </svg>
@@ -23,11 +24,13 @@ const SkipForward = props => {
 };
 
 SkipForward.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 SkipForward.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CloudDrizzle = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const CloudDrizzle = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <line x1="8" y1="19" x2="8" y2="21" />
       <line x1="8" y1="13" x2="8" y2="15" />
       <line x1="16" y1="19" x2="16" y2="21" />
@@ -28,11 +29,13 @@ const CloudDrizzle = props => {
 };
 
 CloudDrizzle.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 CloudDrizzle.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

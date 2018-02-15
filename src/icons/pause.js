@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Pause = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Pause = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <rect x="6" y="4" width="4" height="16" />
       <rect x="14" y="4" width="4" height="16" />
     </svg>
@@ -23,11 +24,13 @@ const Pause = props => {
 };
 
 Pause.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Pause.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

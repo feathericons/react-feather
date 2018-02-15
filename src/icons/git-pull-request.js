@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const GitPullRequest = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const GitPullRequest = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="18" cy="18" r="3" />
       <circle cx="6" cy="6" r="3" />
       <path d="M13 6h3a2 2 0 0 1 2 2v7" />
@@ -25,11 +26,13 @@ const GitPullRequest = props => {
 };
 
 GitPullRequest.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 GitPullRequest.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

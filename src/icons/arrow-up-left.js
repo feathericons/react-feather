@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ArrowUpLeft = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const ArrowUpLeft = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <line x1="17" y1="17" x2="7" y2="7" />
       <polyline points="7 17 7 7 17 7" />
     </svg>
@@ -23,11 +24,13 @@ const ArrowUpLeft = props => {
 };
 
 ArrowUpLeft.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 ArrowUpLeft.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

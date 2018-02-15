@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Tablet = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Tablet = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <rect
         x="4"
         y="2"
@@ -31,11 +32,13 @@ const Tablet = props => {
 };
 
 Tablet.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Tablet.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

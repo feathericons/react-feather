@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PieChart = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const PieChart = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
       <path d="M22 12A10 10 0 0 0 12 2v10z" />
     </svg>
@@ -23,11 +24,13 @@ const PieChart = props => {
 };
 
 PieChart.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 PieChart.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };
