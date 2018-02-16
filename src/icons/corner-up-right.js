@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const CornerUpRight = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const CornerUpRight = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="15 14 20 9 15 4" />
       <path d="M4 20v-7a4 4 0 0 1 4-4h12" />
     </svg>
@@ -23,11 +24,13 @@ const CornerUpRight = props => {
 };
 
 CornerUpRight.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 CornerUpRight.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

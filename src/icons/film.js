@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Film = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Film = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
       <line x1="7" y1="2" x2="7" y2="22" />
       <line x1="17" y1="2" x2="17" y2="22" />
@@ -29,11 +30,13 @@ const Film = props => {
 };
 
 Film.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Film.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

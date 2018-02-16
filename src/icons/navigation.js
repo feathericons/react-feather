@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Navigation = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,17 +16,20 @@ const Navigation = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polygon points="3 11 22 2 13 21 11 13 3 11" />
     </svg>
   );
 };
 
 Navigation.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Navigation.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Sunrise = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Sunrise = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M17 18a5 5 0 0 0-10 0" />
       <line x1="12" y1="2" x2="12" y2="9" />
       <line x1="4.22" y1="10.22" x2="5.64" y2="11.64" />
@@ -29,11 +30,13 @@ const Sunrise = props => {
 };
 
 Sunrise.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Sunrise.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FolderMinus = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const FolderMinus = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
       <line x1="9" y1="14" x2="15" y2="14" />
     </svg>
@@ -23,11 +24,13 @@ const FolderMinus = props => {
 };
 
 FolderMinus.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 FolderMinus.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const UserCheck = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const UserCheck = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="8.5" cy="7" r="4" />
       <polyline points="17 11 19 13 23 9" />
@@ -24,11 +25,13 @@ const UserCheck = props => {
 };
 
 UserCheck.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 UserCheck.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

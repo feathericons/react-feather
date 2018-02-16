@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RotateCw = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const RotateCw = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="23 4 23 10 17 10" />
       <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
     </svg>
@@ -23,11 +24,13 @@ const RotateCw = props => {
 };
 
 RotateCw.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 RotateCw.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

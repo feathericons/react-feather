@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Crop = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Crop = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15" />
       <path d="M1 6.13L16 6a2 2 0 0 1 2 2v15" />
     </svg>
@@ -23,11 +24,13 @@ const Crop = props => {
 };
 
 Crop.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Crop.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

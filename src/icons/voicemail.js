@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Voicemail = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Voicemail = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="5.5" cy="11.5" r="4.5" />
       <circle cx="18.5" cy="11.5" r="4.5" />
       <line x1="5.5" y1="16" x2="18.5" y2="16" />
@@ -24,11 +25,13 @@ const Voicemail = props => {
 };
 
 Voicemail.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Voicemail.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

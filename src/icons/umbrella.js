@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Umbrella = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,17 +16,20 @@ const Umbrella = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7" />
     </svg>
   );
 };
 
 Umbrella.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Umbrella.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FastForward = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const FastForward = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polygon points="13 19 22 12 13 5 13 19" />
       <polygon points="2 19 11 12 2 5 2 19" />
     </svg>
@@ -23,11 +24,13 @@ const FastForward = props => {
 };
 
 FastForward.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 FastForward.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

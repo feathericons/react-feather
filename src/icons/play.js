@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Play = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,17 +16,20 @@ const Play = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polygon points="5 3 19 12 5 21 5 3" />
     </svg>
   );
 };
 
 Play.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Play.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

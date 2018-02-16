@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Aperture = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Aperture = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <circle cx="12" cy="12" r="10" />
       <line x1="14.31" y1="8" x2="20.05" y2="17.94" />
       <line x1="9.69" y1="8" x2="21.17" y2="8" />
@@ -28,11 +29,13 @@ const Aperture = props => {
 };
 
 Aperture.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Aperture.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };

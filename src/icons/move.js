@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Move = props => {
-  const { color, size, ...otherProps } = props;
+  const { children, color, size, ...otherProps } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,7 @@ const Move = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
+      {children}
       <polyline points="5 9 2 12 5 15" />
       <polyline points="9 5 12 2 15 5" />
       <polyline points="15 19 12 22 9 19" />
@@ -27,11 +28,13 @@ const Move = props => {
 };
 
 Move.propTypes = {
+  children: PropTypes.object,
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Move.defaultProps = {
+  children: null,
   color: 'currentColor',
   size: '24',
 };
