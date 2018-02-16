@@ -18,7 +18,17 @@ class MyClass extends React.Component {
     return <Camera />
   }
 }
-````
+```
+If you are using WebPack, you can import only one icon.
+```javascript
+import Camera from 'react-feather/dist/icons/camera';
+
+class MyClass extends React.Component {
+  render() {
+    return <Camera />
+  }
+}
+```
 If you can't use ES6 imports, it's possible to include icons from the compiled folder ./dist.
 ```javascript
 var Camera = require('react-feather/dist/icons/camera').default;
