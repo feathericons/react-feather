@@ -104,6 +104,7 @@ export Flag from './icons/flag';
 export FolderMinus from './icons/folder-minus';
 export FolderPlus from './icons/folder-plus';
 export Folder from './icons/folder';
+export Gift from './icons/gift';
 export GitBranch from './icons/git-branch';
 export GitCommit from './icons/git-commit';
 export GitMerge from './icons/git-merge';
