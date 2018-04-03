@@ -257,6 +257,7 @@ export Wind from './icons/wind';
 export XCircle from './icons/x-circle';
 export XSquare from './icons/x-square';
 export X from './icons/x';
+export Youtube from './icons/youtube';
 export ZapOff from './icons/zap-off';
 export Zap from './icons/zap';
 export ZoomIn from './icons/zoom-in';
