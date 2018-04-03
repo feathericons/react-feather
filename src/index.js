@@ -9,6 +9,7 @@ export AlignLeft from './icons/align-left';
 export AlignRight from './icons/align-right';
 export Anchor from './icons/anchor';
 export Aperture from './icons/aperture';
+export Archive from './icons/archive';
 export ArrowDownCircle from './icons/arrow-down-circle';
 export ArrowDownLeft from './icons/arrow-down-left';
 export ArrowDownRight from './icons/arrow-down-right';
