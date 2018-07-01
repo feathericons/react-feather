@@ -40,7 +40,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "glob": "^7.1.2",
-    "prettier": "^1.4.4",
+    "prettier": "^1.13.7",
     "uppercamelcase": "^3.0.0"
   }
 }
