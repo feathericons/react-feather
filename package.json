@@ -3,9 +3,10 @@
   "version": "1.1.0",
   "description": "React component for Feather icons",
   "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node ./bin/build && babel src --out-dir dist --ignore 'src/feather'"
+    "build": "node ./bin/build && babel src --out-dir dist --ignore 'src/feather' --copy-files"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.3",
     "eslint-plugin-react": "^7.0.1",
     "glob": "^7.1.2",
-    "prettier": "^1.4.4",
+    "prettier": "^1.13.7",
     "uppercamelcase": "^3.0.0"
   }
 }
