@@ -8,7 +8,10 @@ const prettier = require('prettier');
 
 const rootDir = path.join(__dirname, '..');
 
-const initialTypeDefinitions = `/// <reference types="react" />
+const TS_FILE = 'index.d.ts';
+const FLOW_FILE = 'index.js.flow';
+
+const initialTsTypeDefinitions = `/// <reference types="react" />
 import { ComponentType, SVGAttributes } from 'react';
 
 interface Props extends SVGAttributes<SVGElement> {
@@ -19,15 +22,36 @@ interface Props extends SVGAttributes<SVGElement> {
 type Icon = ComponentType<Props>;
 `;
 
+const initialFlowTypeDefinitions = `// @flow
+import type { ComponentType } from 'react';
+
+declare type ReactFeatherProps = $PropertyType<ReactDOM$SVGElementJSXIntrinsic, 'props'> & {
+  color?: string,
+  size?: string | number,
+};
+
+declare type ReactFeatherIcon = ComponentType<ReactFeatherProps>;
+
+declare module.exports: {
+`;
+
+const flowTypeDefinitionSuffix = '}\n';
+
 glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
   fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
   fs.writeFileSync(
-    path.join(rootDir, 'src', 'index.d.ts'),
-    initialTypeDefinitions,
+    path.join(rootDir, 'src', TS_FILE),
+    initialTsTypeDefinitions,
     'utf-8'
   );
+  fs.writeFileSync(
+    path.join(rootDir, 'src', FLOW_FILE),
+    initialFlowTypeDefinitions,
+    'utf-8'
+  )
 
   icons.forEach(i => {
+    console.log(i);
     const svg = fs.readFileSync(i, 'utf-8');
     const id = path.basename(i, '.svg');
     const ComponentName = uppercamelcase(id);
@@ -102,11 +126,23 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
       'utf-8'
     );
 
-    const exportTypeString = `export const ${ComponentName}: Icon;\n`;
+    const exportTsTypeString = `export const ${ComponentName}: Icon;\n`;
     fs.appendFileSync(
-      path.join(rootDir, 'src', 'index.d.ts'),
-      exportTypeString,
+      path.join(rootDir, 'src', TS_FILE),
+      exportTsTypeString,
+      'utf-8'
+    );
+    const exportFlowTypeString = `  ${ComponentName}: ReactFeatherIcon,\n`;
+    fs.appendFileSync(
+      path.join(rootDir, 'src', FLOW_FILE),
+      exportFlowTypeString,
       'utf-8'
     );
   });
+
+  fs.appendFileSync(
+    path.join(rootDir, 'src', FLOW_FILE),
+      flowTypeDefinitionSuffix,
+      'utf-8'
+  );
 });
