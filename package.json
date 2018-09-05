@@ -3,11 +3,19 @@
   "version": "1.1.3",
   "description": "React component for Feather icons",
   "main": "dist/index.js",
+  "module": "es/index.js",
+  "sideEffects": false,
   "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "git submodule update --recursive --remote && node ./bin/build && babel src --out-dir dist --ignore 'src/feather' --copy-files"
+    "build:bundle": "rm -rf dist && rollup --config rollup.config.js",
+    "build:es": "rm -rf es && babel src --out-dir es",
+    "build": "concurrently \"npm:build:*\""
   },
+  "files": [
+    "dist",
+    "es"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/carmelopullara/react-feather.git"
@@ -27,21 +35,21 @@
   },
   "homepage": "https://github.com/carmelopullara/react-feather#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-eslint": "^9.0.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-es2015": "^6.24.1",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "camelcase": "^5.0.0",
-    "cheerio": "^1.0.0-rc.1",
+    "concurrently": "^4.0.1",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.0.1",
-    "glob": "^7.1.2",
-    "prettier": "^1.13.7",
-    "uppercamelcase": "^3.0.0"
+    "rollup": "^0.65.0",
+    "rollup-plugin-babel": "^4.0.3"
   }
 }
