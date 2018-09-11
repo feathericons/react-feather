@@ -43,5 +43,9 @@
     "glob": "^7.1.2",
     "prettier": "^1.13.7",
     "uppercamelcase": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": ">= 15",
+    "prop-types": ">= 15"
   }
 }
