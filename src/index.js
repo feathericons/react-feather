@@ -110,7 +110,7 @@ export GitBranch from './icons/git-branch';
 export GitCommit from './icons/git-commit';
 export GitMerge from './icons/git-merge';
 export GitPullRequest from './icons/git-pull-request';
-export Github from './icons/github';
+export GitHub from './icons/github';
 export Gitlab from './icons/gitlab';
 export Globe from './icons/globe';
 export Grid from './icons/grid';
