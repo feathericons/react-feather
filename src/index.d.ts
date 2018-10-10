@@ -119,7 +119,7 @@ export const GitBranch: Icon;
 export const GitCommit: Icon;
 export const GitMerge: Icon;
 export const GitPullRequest: Icon;
-export const Github: Icon;
+export const GitHub: Icon;
 export const Gitlab: Icon;
 export const Globe: Icon;
 export const Grid: Icon;
