@@ -30,7 +30,7 @@ glob(`${rootDir}/src/feather/icons/**.svg`, (err, icons) => {
   icons.forEach(i => {
     const svg = fs.readFileSync(i, 'utf-8');
     const id = path.basename(i, '.svg');
-    const ComponentName = uppercamelcase(id);
+    const ComponentName = (id === 'github') ? 'GitHub' : uppercamelcase(id);
     const $ = cheerio.load(svg, {
       xmlMode: true,
     });
