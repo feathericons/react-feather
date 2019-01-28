@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/carmelopullara/react-feather.git"
+    "url": "git+https://github.com/feathericons/react-feather.git"
   },
   "keywords": [
     "react",
@@ -23,9 +23,9 @@
   "author": "Carmelo Pullara",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/carmelopullara/react-feather/issues"
+    "url": "https://github.com/feathericons/react-feather/issues"
   },
-  "homepage": "https://github.com/carmelopullara/react-feather#readme",
+  "homepage": "https://github.com/feathericons/react-feather#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-eslint": "^9.0.0",
