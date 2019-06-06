@@ -1,6 +1,7 @@
 ## React Feather Icons
 
-[![npm](https://img.shields.io/npm/v/react-feather.svg)](https://www.npmjs.com/package/react-feather)
+[![npm version](https://img.shields.io/npm/v/react-feather.svg?style=flat-square)](https://www.npmjs.com/package/react-feather)
+[![npm downloads](https://img.shields.io/npm/dm/react-feather.svg?style=flat-square)](https://www.npmjs.com/package/react-feather)
 
 #### What is react-feather?
 react-feather is a collection of simply beautiful open source icons for React.js. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
