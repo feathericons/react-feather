@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "rm -rf src/icons && node bin/build.js",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
-    "build:es": "rm -rf dist && babel src --out-dir dist",
+    "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
     "build": "concurrently \"npm:build:*\""
   },
   "files": [
