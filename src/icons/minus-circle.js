@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MinusCircle = props => {
+const MinusCircle = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

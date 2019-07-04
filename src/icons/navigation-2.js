@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Navigation2 = props => {
+const Navigation2 = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

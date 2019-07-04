@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Minimize2 = props => {
+const Minimize2 = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

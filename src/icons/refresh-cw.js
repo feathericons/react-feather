@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const RefreshCw = props => {
+const RefreshCw = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

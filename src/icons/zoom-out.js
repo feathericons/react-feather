@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ZoomOut = props => {
+const ZoomOut = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

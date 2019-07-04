@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Download = props => {
+const Download = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const MoreVertical = props => {
+const MoreVertical = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

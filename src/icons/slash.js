@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Slash = props => {
+const Slash = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

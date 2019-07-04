@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowLeftCircle = props => {
+const ArrowLeftCircle = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

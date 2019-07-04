@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Music = props => {
+const Music = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -16,8 +16,9 @@ const Music = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M9 17H5a2 2 0 0 0-2 2 2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm12-2h-4a2 2 0 0 0-2 2 2 2 0 0 0 2 2h2a2 2 0 0 0 2-2z" />
-      <polyline points="9 17 9 5 21 3 21 15" />
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
     </svg>
   );
 };

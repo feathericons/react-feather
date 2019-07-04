@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Camera = props => {
+const Camera = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

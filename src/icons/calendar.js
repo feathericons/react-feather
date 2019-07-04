@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Calendar = props => {
+const Calendar = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

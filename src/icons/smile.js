@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Smile = props => {
+const Smile = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
-      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
       fill="none"
       stroke={color}
       strokeWidth="2"

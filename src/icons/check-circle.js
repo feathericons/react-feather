@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CheckCircle = props => {
+const CheckCircle = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

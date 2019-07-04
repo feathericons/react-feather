@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlertTriangle = props => {
+const AlertTriangle = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

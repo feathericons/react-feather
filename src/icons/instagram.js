@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Instagram = props => {
+const Instagram = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

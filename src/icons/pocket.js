@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Pocket = props => {
+const Pocket = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

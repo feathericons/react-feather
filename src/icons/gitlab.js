@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Gitlab = props => {
+const Gitlab = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Italic = props => {
+const Italic = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

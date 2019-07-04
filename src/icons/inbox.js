@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Inbox = props => {
+const Inbox = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

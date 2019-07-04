@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Sun = props => {
+const Sun = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

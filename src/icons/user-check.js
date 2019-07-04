@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const UserCheck = props => {
+const UserCheck = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Codepen = props => {
+const Codepen = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

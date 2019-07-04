@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CloudDrizzle = props => {
+const CloudDrizzle = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
