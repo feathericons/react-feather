@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Sidebar = props => {
+const Sidebar = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

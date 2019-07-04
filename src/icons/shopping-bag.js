@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ShoppingBag = props => {
+const ShoppingBag = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

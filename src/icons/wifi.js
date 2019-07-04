@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Wifi = props => {
+const Wifi = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

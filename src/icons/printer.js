@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Printer = props => {
+const Printer = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

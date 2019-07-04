@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Filter = props => {
+const Filter = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

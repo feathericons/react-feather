@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Sliders = props => {
+const Sliders = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Airplay = props => {
+const Airplay = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

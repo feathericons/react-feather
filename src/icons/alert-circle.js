@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const AlertCircle = props => {
+const AlertCircle = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

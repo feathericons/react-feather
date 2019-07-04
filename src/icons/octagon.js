@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Octagon = props => {
+const Octagon = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

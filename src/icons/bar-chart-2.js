@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const BarChart2 = props => {
+const BarChart2 = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

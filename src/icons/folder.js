@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Folder = props => {
+const Folder = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

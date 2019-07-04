@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Film = props => {
+const Film = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

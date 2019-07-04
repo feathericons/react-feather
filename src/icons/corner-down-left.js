@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CornerDownLeft = props => {
+const CornerDownLeft = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

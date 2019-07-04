@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Edit2 = props => {
+const Edit2 = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -16,7 +16,7 @@ const Edit2 = props => {
       strokeLinejoin="round"
       {...otherProps}
     >
-      <polygon points="16 3 21 8 8 21 3 21 3 16 16 3" />
+      <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" />
     </svg>
   );
 };

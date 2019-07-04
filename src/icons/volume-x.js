@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const VolumeX = props => {
+const VolumeX = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PhoneOutgoing = props => {
+const PhoneOutgoing = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

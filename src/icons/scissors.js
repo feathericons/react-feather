@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Scissors = props => {
+const Scissors = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

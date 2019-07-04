@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Eye = props => {
+const Eye = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg

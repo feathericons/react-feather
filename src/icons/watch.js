@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Watch = props => {
+const Watch = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
