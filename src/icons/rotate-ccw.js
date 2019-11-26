@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const RotateCcw = (props) => {
+const RotateCcw = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const RotateCcw = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="1 4 1 10 7 10" />
       <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
     </svg>
   );
-};
+});
 
 RotateCcw.propTypes = {
   color: PropTypes.string,

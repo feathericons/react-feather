@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Bluetooth = (props) => {
+const Bluetooth = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,11 +15,12 @@ const Bluetooth = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5" />
     </svg>
   );
-};
+});
 
 Bluetooth.propTypes = {
   color: PropTypes.string,

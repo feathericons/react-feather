@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const UploadCloud = (props) => {
+const UploadCloud = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const UploadCloud = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="16 16 12 12 8 16" />
       <line x1="12" y1="12" x2="12" y2="21" />
@@ -22,7 +23,7 @@ const UploadCloud = (props) => {
       <polyline points="16 16 12 12 8 16" />
     </svg>
   );
-};
+});
 
 UploadCloud.propTypes = {
   color: PropTypes.string,

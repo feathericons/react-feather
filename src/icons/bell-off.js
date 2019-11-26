@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BellOff = (props) => {
+const BellOff = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const BellOff = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <path d="M13.73 21a2 2 0 0 1-3.46 0" />
       <path d="M18.63 13A17.89 17.89 0 0 1 18 8" />
@@ -23,7 +24,7 @@ const BellOff = (props) => {
       <line x1="1" y1="1" x2="23" y2="23" />
     </svg>
   );
-};
+});
 
 BellOff.propTypes = {
   color: PropTypes.string,

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Move = (props) => {
+const Move = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Move = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="5 9 2 12 5 15" />
       <polyline points="9 5 12 2 15 5" />
@@ -24,7 +25,7 @@ const Move = (props) => {
       <line x1="12" y1="2" x2="12" y2="22" />
     </svg>
   );
-};
+});
 
 Move.propTypes = {
   color: PropTypes.string,

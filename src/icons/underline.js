@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Underline = (props) => {
+const Underline = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const Underline = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3" />
       <line x1="4" y1="21" x2="20" y2="21" />
     </svg>
   );
-};
+});
 
 Underline.propTypes = {
   color: PropTypes.string,

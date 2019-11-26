@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Coffee = (props) => {
+const Coffee = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Coffee = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
       <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
@@ -23,7 +24,7 @@ const Coffee = (props) => {
       <line x1="14" y1="1" x2="14" y2="4" />
     </svg>
   );
-};
+});
 
 Coffee.propTypes = {
   color: PropTypes.string,

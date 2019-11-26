@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Activity = (props) => {
+const Activity = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,11 +15,12 @@ const Activity = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
     </svg>
   );
-};
+});
 
 Activity.propTypes = {
   color: PropTypes.string,

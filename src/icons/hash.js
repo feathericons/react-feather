@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Hash = (props) => {
+const Hash = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Hash = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <line x1="4" y1="9" x2="20" y2="9" />
       <line x1="4" y1="15" x2="20" y2="15" />
@@ -22,7 +23,7 @@ const Hash = (props) => {
       <line x1="16" y1="3" x2="14" y2="21" />
     </svg>
   );
-};
+});
 
 Hash.propTypes = {
   color: PropTypes.string,

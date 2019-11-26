@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const TrendingDown = (props) => {
+const TrendingDown = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const TrendingDown = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
       <polyline points="17 18 23 18 23 12" />
     </svg>
   );
-};
+});
 
 TrendingDown.propTypes = {
   color: PropTypes.string,

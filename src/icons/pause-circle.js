@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PauseCircle = (props) => {
+const PauseCircle = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,13 +15,14 @@ const PauseCircle = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <circle cx="12" cy="12" r="10" />
       <line x1="10" y1="15" x2="10" y2="9" />
       <line x1="14" y1="15" x2="14" y2="9" />
     </svg>
   );
-};
+});
 
 PauseCircle.propTypes = {
   color: PropTypes.string,

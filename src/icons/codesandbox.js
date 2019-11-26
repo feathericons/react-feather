@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Codesandbox = (props) => {
+const Codesandbox = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Codesandbox = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
       <polyline points="7.5 4.21 12 6.81 16.5 4.21" />
@@ -24,7 +25,7 @@ const Codesandbox = (props) => {
       <line x1="12" y1="22.08" x2="12" y2="12" />
     </svg>
   );
-};
+});
 
 Codesandbox.propTypes = {
   color: PropTypes.string,

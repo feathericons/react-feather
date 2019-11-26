@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ToggleRight = (props) => {
+const ToggleRight = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const ToggleRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <rect x="1" y="5" width="22" height="14" rx="7" ry="7" />
       <circle cx="16" cy="12" r="3" />
     </svg>
   );
-};
+});
 
 ToggleRight.propTypes = {
   color: PropTypes.string,

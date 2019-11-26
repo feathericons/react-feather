@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Film = (props) => {
+const Film = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Film = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" />
       <line x1="7" y1="2" x2="7" y2="22" />
@@ -26,7 +27,7 @@ const Film = (props) => {
       <line x1="17" y1="7" x2="22" y2="7" />
     </svg>
   );
-};
+});
 
 Film.propTypes = {
   color: PropTypes.string,

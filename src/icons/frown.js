@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Frown = (props) => {
+const Frown = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Frown = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <circle cx="12" cy="12" r="10" />
       <path d="M16 16s-1.5-2-4-2-4 2-4 2" />
@@ -22,7 +23,7 @@ const Frown = (props) => {
       <line x1="15" y1="9" x2="15.01" y2="9" />
     </svg>
   );
-};
+});
 
 Frown.propTypes = {
   color: PropTypes.string,

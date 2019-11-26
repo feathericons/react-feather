@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Repeat = (props) => {
+const Repeat = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Repeat = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="17 1 21 5 17 9" />
       <path d="M3 11V9a4 4 0 0 1 4-4h14" />
@@ -22,7 +23,7 @@ const Repeat = (props) => {
       <path d="M21 13v2a4 4 0 0 1-4 4H3" />
     </svg>
   );
-};
+});
 
 Repeat.propTypes = {
   color: PropTypes.string,

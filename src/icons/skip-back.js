@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const SkipBack = (props) => {
+const SkipBack = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const SkipBack = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polygon points="19 20 9 12 19 4 19 20" />
       <line x1="5" y1="19" x2="5" y2="5" />
     </svg>
   );
-};
+});
 
 SkipBack.propTypes = {
   color: PropTypes.string,

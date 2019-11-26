@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ChevronsUp = (props) => {
+const ChevronsUp = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const ChevronsUp = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="17 11 12 6 7 11" />
       <polyline points="17 18 12 13 7 18" />
     </svg>
   );
-};
+});
 
 ChevronsUp.propTypes = {
   color: PropTypes.string,

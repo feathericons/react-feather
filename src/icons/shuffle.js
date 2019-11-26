@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Shuffle = (props) => {
+const Shuffle = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Shuffle = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="16 3 21 3 21 8" />
       <line x1="4" y1="20" x2="21" y2="3" />
@@ -23,7 +24,7 @@ const Shuffle = (props) => {
       <line x1="4" y1="4" x2="9" y2="9" />
     </svg>
   );
-};
+});
 
 Shuffle.propTypes = {
   color: PropTypes.string,

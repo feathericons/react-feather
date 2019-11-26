@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MinusSquare = (props) => {
+const MinusSquare = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const MinusSquare = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
       <line x1="8" y1="12" x2="16" y2="12" />
     </svg>
   );
-};
+});
 
 MinusSquare.propTypes = {
   color: PropTypes.string,

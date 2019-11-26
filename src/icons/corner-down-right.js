@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CornerDownRight = (props) => {
+const CornerDownRight = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const CornerDownRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="15 10 20 15 15 20" />
       <path d="M4 4v7a4 4 0 0 0 4 4h12" />
     </svg>
   );
-};
+});
 
 CornerDownRight.propTypes = {
   color: PropTypes.string,

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Aperture = (props) => {
+const Aperture = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Aperture = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <circle cx="12" cy="12" r="10" />
       <line x1="14.31" y1="8" x2="20.05" y2="17.94" />
@@ -25,7 +26,7 @@ const Aperture = (props) => {
       <line x1="16.62" y1="12" x2="10.88" y2="21.94" />
     </svg>
   );
-};
+});
 
 Aperture.propTypes = {
   color: PropTypes.string,

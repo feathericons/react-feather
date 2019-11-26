@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Speaker = (props) => {
+const Speaker = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,13 +15,14 @@ const Speaker = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
       <circle cx="12" cy="14" r="4" />
-      <line x1="12" y1="6" x2="12" y2="6" />
+      <line x1="12" y1="6" x2="12.01" y2="6" />
     </svg>
   );
-};
+});
 
 Speaker.propTypes = {
   color: PropTypes.string,

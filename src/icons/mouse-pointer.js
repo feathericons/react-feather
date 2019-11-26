@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MousePointer = (props) => {
+const MousePointer = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const MousePointer = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
       <path d="M13 13l6 6" />
     </svg>
   );
-};
+});
 
 MousePointer.propTypes = {
   color: PropTypes.string,

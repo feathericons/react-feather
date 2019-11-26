@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AlignRight = (props) => {
+const AlignRight = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const AlignRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <line x1="21" y1="10" x2="7" y2="10" />
       <line x1="21" y1="6" x2="3" y2="6" />
@@ -22,7 +23,7 @@ const AlignRight = (props) => {
       <line x1="21" y1="18" x2="7" y2="18" />
     </svg>
   );
-};
+});
 
 AlignRight.propTypes = {
   color: PropTypes.string,

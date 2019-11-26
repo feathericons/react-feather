@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Sliders = (props) => {
+const Sliders = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Sliders = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <line x1="4" y1="21" x2="4" y2="14" />
       <line x1="4" y1="10" x2="4" y2="3" />
@@ -27,7 +28,7 @@ const Sliders = (props) => {
       <line x1="17" y1="16" x2="23" y2="16" />
     </svg>
   );
-};
+});
 
 Sliders.propTypes = {
   color: PropTypes.string,

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Minimize2 = (props) => {
+const Minimize2 = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Minimize2 = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <polyline points="4 14 10 14 10 20" />
       <polyline points="20 10 14 10 14 4" />
@@ -22,7 +23,7 @@ const Minimize2 = (props) => {
       <line x1="3" y1="21" x2="10" y2="14" />
     </svg>
   );
-};
+});
 
 Minimize2.propTypes = {
   color: PropTypes.string,

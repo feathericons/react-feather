@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowDownRight = (props) => {
+const ArrowDownRight = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,12 +15,13 @@ const ArrowDownRight = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <line x1="7" y1="7" x2="17" y2="17" />
       <polyline points="17 7 17 17 7 17" />
     </svg>
   );
-};
+});
 
 ArrowDownRight.propTypes = {
   color: PropTypes.string,

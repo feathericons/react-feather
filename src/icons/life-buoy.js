@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const LifeBuoy = (props) => {
+const LifeBuoy = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const LifeBuoy = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <circle cx="12" cy="12" r="10" />
       <circle cx="12" cy="12" r="4" />
@@ -25,7 +26,7 @@ const LifeBuoy = (props) => {
       <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
     </svg>
   );
-};
+});
 
 LifeBuoy.propTypes = {
   color: PropTypes.string,

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Sun = (props) => {
+const Sun = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Sun = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <circle cx="12" cy="12" r="5" />
       <line x1="12" y1="1" x2="12" y2="3" />
@@ -27,7 +28,7 @@ const Sun = (props) => {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </svg>
   );
-};
+});
 
 Sun.propTypes = {
   color: PropTypes.string,

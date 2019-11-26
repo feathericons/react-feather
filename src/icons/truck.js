@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Truck = (props) => {
+const Truck = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const Truck = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <rect x="1" y="3" width="15" height="13" />
       <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
@@ -22,7 +23,7 @@ const Truck = (props) => {
       <circle cx="18.5" cy="18.5" r="2.5" />
     </svg>
   );
-};
+});
 
 Truck.propTypes = {
   color: PropTypes.string,

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const UserX = (props) => {
+const UserX = forwardRef((props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -15,6 +15,7 @@ const UserX = (props) => {
       strokeLinecap="round"
       strokeLinejoin="round"
       {...otherProps}
+      ref={ref}
     >
       <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="8.5" cy="7" r="4" />
@@ -22,7 +23,7 @@ const UserX = (props) => {
       <line x1="23" y1="8" x2="18" y2="13" />
     </svg>
   );
-};
+});
 
 UserX.propTypes = {
   color: PropTypes.string,
