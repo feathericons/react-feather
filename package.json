@@ -9,13 +9,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "rm -rf src/icons && node bin/build.js",
-    "build:bundle": "rm -rf build && rollup --config rollup.config.js",
-    "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
-    "build": "concurrently \"npm:build:*\""
+    "build": "rollup -c",
+    "start": "rollup -c -w"
   },
   "files": [
-    "dist",
-    "es"
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -36,29 +34,50 @@
   },
   "homepage": "https://github.com/feathericons/react-feather#readme",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@svgr/rollup": "^2.4.1",
+    "@types/babel__core": "^7.1.3",
+    "@types/babel-core": "^6.25.6",
+    "@types/concurrently": "^4.1.0",
+    "@types/eslint": "^6.1.3",
+    "@types/feather-icons": "^4.7.0",
+    "@types/gh-pages": "^2.0.1",
+    "@types/jest": "^23.1.5",
+    "@types/prop-types": "^15.7.3",
+    "@types/react-dom": "^16.9.4",
+    "@types/react": "^16.9.13",
+    "@types/rollup-plugin-peer-deps-external": "^2.2.0",
+    "@types/rollup-plugin-postcss": "^2.0.0",
+    "@types/rollup-plugin-url": "^2.2.0",
+    "@types/svgr__rollup": "^4.3.0",
+    "@types/uppercamelcase": "^3.0.0",
     "concurrently": "^4.1.1",
-    "eslint": "^5.16.0",
+    "cross-env": "^5.1.4",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
+    "eslint": "^5.16.0",
     "feather-icons": "^4.24.1",
+    "gh-pages": "^1.2.0",
     "prettier-eslint": "^9.0.0",
-    "rollup": "^1.16.4",
-    "rollup-plugin-babel": "^4.3.3",
+    "prop-types": "^15.7.2",
+    "react-dom": "^16.4.1",
+    "react-scripts": "3.2.0",
+    "react": "^16.12.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "rollup-plugin-url": "^1.4.0",
+    "rollup": "^0.62.0",
+    "typescript": "^3.7.2",
     "uppercamelcase": "^3.0.0"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
-  },
-  "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   }
 }
