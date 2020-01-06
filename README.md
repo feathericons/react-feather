@@ -33,7 +33,7 @@ export default App;
 
 Icons can be configured with inline props:
 ```javascript
-<Camera color="red" size={48} />
+<Camera color="red" size={48} strokeWidth={2} />
 ```
 
 If you can't use ES6 imports, it's possible to include icons from the compiled folder ./dist.
