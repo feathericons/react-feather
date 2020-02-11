@@ -1,6 +1,6 @@
 {
   "name": "react-feather",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "React component for Feather icons",
   "main": "build/index.js",
   "module": "dist/index.js",
@@ -49,7 +49,7 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "feather-icons": "^4.22.1",
+    "feather-icons": "^4.26.0",
     "prettier-eslint": "^9.0.0",
     "rollup": "^1.16.4",
     "rollup-plugin-babel": "^4.3.3",
