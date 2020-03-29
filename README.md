@@ -16,7 +16,7 @@ react-feather is a collection of simply beautiful open source icons for React.js
 #### Version `2.0.0` adds support for tree-shaking, to help you reduce bundle size.
 
 ### Installation
-    npm install react-feather --save
+    npm install react-feather
 
 ### Usage
 
