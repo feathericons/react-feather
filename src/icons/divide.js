@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Wifi = (props) => {
+const Divide = (props) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
@@ -16,22 +16,21 @@ const Wifi = (props) => {
       strokeLinejoin="round"
       {...otherProps}
     >
-      <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-      <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-      <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-      <line x1="12" y1="20" x2="12.01" y2="20" />
+      <circle cx="12" cy="6" r="2" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <circle cx="12" cy="18" r="2" />
     </svg>
   );
 };
 
-Wifi.propTypes = {
+Divide.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Wifi.defaultProps = {
+Divide.defaultProps = {
   color: 'currentColor',
   size: '24',
 };
 
-export default Wifi;
+export default Divide;
