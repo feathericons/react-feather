@@ -33,4 +33,6 @@ Terminal.defaultProps = {
   size: '24',
 };
 
+Terminal.displayName = 'Terminal';
+
 export default forwardRef(Terminal);

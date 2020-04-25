@@ -32,4 +32,6 @@ Twitter.defaultProps = {
   size: '24',
 };
 
+Twitter.displayName = 'Twitter';
+
 export default forwardRef(Twitter);

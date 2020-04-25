@@ -32,4 +32,6 @@ Star.defaultProps = {
   size: '24',
 };
 
+Star.displayName = 'Star';
+
 export default forwardRef(Star);

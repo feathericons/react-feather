@@ -35,4 +35,6 @@ UploadCloud.defaultProps = {
   size: '24',
 };
 
+UploadCloud.displayName = 'UploadCloud';
+
 export default forwardRef(UploadCloud);

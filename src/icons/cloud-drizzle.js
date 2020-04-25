@@ -38,4 +38,6 @@ CloudDrizzle.defaultProps = {
   size: '24',
 };
 
+CloudDrizzle.displayName = 'CloudDrizzle';
+
 export default forwardRef(CloudDrizzle);

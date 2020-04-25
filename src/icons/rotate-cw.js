@@ -33,4 +33,6 @@ RotateCw.defaultProps = {
   size: '24',
 };
 
+RotateCw.displayName = 'RotateCw';
+
 export default forwardRef(RotateCw);

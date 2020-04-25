@@ -32,4 +32,6 @@ Navigation.defaultProps = {
   size: '24',
 };
 
+Navigation.displayName = 'Navigation';
+
 export default forwardRef(Navigation);

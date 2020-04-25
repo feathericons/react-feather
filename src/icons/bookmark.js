@@ -32,4 +32,6 @@ Bookmark.defaultProps = {
   size: '24',
 };
 
+Bookmark.displayName = 'Bookmark';
+
 export default forwardRef(Bookmark);

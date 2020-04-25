@@ -34,4 +34,6 @@ Speaker.defaultProps = {
   size: '24',
 };
 
+Speaker.displayName = 'Speaker';
+
 export default forwardRef(Speaker);

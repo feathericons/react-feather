@@ -33,4 +33,6 @@ Airplay.defaultProps = {
   size: '24',
 };
 
+Airplay.displayName = 'Airplay';
+
 export default forwardRef(Airplay);

@@ -32,4 +32,6 @@ Umbrella.defaultProps = {
   size: '24',
 };
 
+Umbrella.displayName = 'Umbrella';
+
 export default forwardRef(Umbrella);

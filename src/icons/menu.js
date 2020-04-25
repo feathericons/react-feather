@@ -34,4 +34,6 @@ Menu.defaultProps = {
   size: '24',
 };
 
+Menu.displayName = 'Menu';
+
 export default forwardRef(Menu);

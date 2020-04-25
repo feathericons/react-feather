@@ -34,4 +34,6 @@ Percent.defaultProps = {
   size: '24',
 };
 
+Percent.displayName = 'Percent';
+
 export default forwardRef(Percent);

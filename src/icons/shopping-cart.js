@@ -34,4 +34,6 @@ ShoppingCart.defaultProps = {
   size: '24',
 };
 
+ShoppingCart.displayName = 'ShoppingCart';
+
 export default forwardRef(ShoppingCart);

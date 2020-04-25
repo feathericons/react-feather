@@ -34,4 +34,6 @@ XOctagon.defaultProps = {
   size: '24',
 };
 
+XOctagon.displayName = 'XOctagon';
+
 export default forwardRef(XOctagon);

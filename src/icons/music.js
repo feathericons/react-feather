@@ -34,4 +34,6 @@ Music.defaultProps = {
   size: '24',
 };
 
+Music.displayName = 'Music';
+
 export default forwardRef(Music);

@@ -34,4 +34,6 @@ ShieldOff.defaultProps = {
   size: '24',
 };
 
+ShieldOff.displayName = 'ShieldOff';
+
 export default forwardRef(ShieldOff);

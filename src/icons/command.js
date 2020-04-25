@@ -32,4 +32,6 @@ Command.defaultProps = {
   size: '24',
 };
 
+Command.displayName = 'Command';
+
 export default forwardRef(Command);

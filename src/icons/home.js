@@ -33,4 +33,6 @@ Home.defaultProps = {
   size: '24',
 };
 
+Home.displayName = 'Home';
+
 export default forwardRef(Home);

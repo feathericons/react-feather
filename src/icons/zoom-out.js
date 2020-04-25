@@ -34,4 +34,6 @@ ZoomOut.defaultProps = {
   size: '24',
 };
 
+ZoomOut.displayName = 'ZoomOut';
+
 export default forwardRef(ZoomOut);

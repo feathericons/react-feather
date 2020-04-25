@@ -33,4 +33,6 @@ Power.defaultProps = {
   size: '24',
 };
 
+Power.displayName = 'Power';
+
 export default forwardRef(Power);

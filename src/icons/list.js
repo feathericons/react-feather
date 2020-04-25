@@ -37,4 +37,6 @@ List.defaultProps = {
   size: '24',
 };
 
+List.displayName = 'List';
+
 export default forwardRef(List);

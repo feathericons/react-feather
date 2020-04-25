@@ -34,4 +34,6 @@ Linkedin.defaultProps = {
   size: '24',
 };
 
+Linkedin.displayName = 'Linkedin';
+
 export default forwardRef(Linkedin);

@@ -32,4 +32,6 @@ Volume.defaultProps = {
   size: '24',
 };
 
+Volume.displayName = 'Volume';
+
 export default forwardRef(Volume);

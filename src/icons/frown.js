@@ -35,4 +35,6 @@ Frown.defaultProps = {
   size: '24',
 };
 
+Frown.displayName = 'Frown';
+
 export default forwardRef(Frown);

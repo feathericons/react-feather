@@ -34,4 +34,6 @@ Globe.defaultProps = {
   size: '24',
 };
 
+Globe.displayName = 'Globe';
+
 export default forwardRef(Globe);

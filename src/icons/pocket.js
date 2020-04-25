@@ -33,4 +33,6 @@ Pocket.defaultProps = {
   size: '24',
 };
 
+Pocket.displayName = 'Pocket';
+
 export default forwardRef(Pocket);

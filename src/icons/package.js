@@ -35,4 +35,6 @@ Package.defaultProps = {
   size: '24',
 };
 
+Package.displayName = 'Package';
+
 export default forwardRef(Package);

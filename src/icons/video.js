@@ -33,4 +33,6 @@ Video.defaultProps = {
   size: '24',
 };
 
+Video.displayName = 'Video';
+
 export default forwardRef(Video);

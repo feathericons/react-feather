@@ -33,4 +33,6 @@ Bold.defaultProps = {
   size: '24',
 };
 
+Bold.displayName = 'Bold';
+
 export default forwardRef(Bold);

@@ -36,4 +36,6 @@ Codepen.defaultProps = {
   size: '24',
 };
 
+Codepen.displayName = 'Codepen';
+
 export default forwardRef(Codepen);

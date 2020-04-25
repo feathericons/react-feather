@@ -34,4 +34,6 @@ PhoneMissed.defaultProps = {
   size: '24',
 };
 
+PhoneMissed.displayName = 'PhoneMissed';
+
 export default forwardRef(PhoneMissed);

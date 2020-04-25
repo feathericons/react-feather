@@ -34,4 +34,6 @@ BatteryCharging.defaultProps = {
   size: '24',
 };
 
+BatteryCharging.displayName = 'BatteryCharging';
+
 export default forwardRef(BatteryCharging);

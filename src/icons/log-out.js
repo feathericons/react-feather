@@ -34,4 +34,6 @@ LogOut.defaultProps = {
   size: '24',
 };
 
+LogOut.displayName = 'LogOut';
+
 export default forwardRef(LogOut);

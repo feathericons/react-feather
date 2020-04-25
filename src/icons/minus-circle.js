@@ -33,4 +33,6 @@ MinusCircle.defaultProps = {
   size: '24',
 };
 
+MinusCircle.displayName = 'MinusCircle';
+
 export default forwardRef(MinusCircle);

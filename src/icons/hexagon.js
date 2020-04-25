@@ -32,4 +32,6 @@ Hexagon.defaultProps = {
   size: '24',
 };
 
+Hexagon.displayName = 'Hexagon';
+
 export default forwardRef(Hexagon);

@@ -32,4 +32,6 @@ PhoneCall.defaultProps = {
   size: '24',
 };
 
+PhoneCall.displayName = 'PhoneCall';
+
 export default forwardRef(PhoneCall);

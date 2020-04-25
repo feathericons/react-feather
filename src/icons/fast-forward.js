@@ -33,4 +33,6 @@ FastForward.defaultProps = {
   size: '24',
 };
 
+FastForward.displayName = 'FastForward';
+
 export default forwardRef(FastForward);

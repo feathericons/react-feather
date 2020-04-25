@@ -34,4 +34,6 @@ Type.defaultProps = {
   size: '24',
 };
 
+Type.displayName = 'Type';
+
 export default forwardRef(Type);

@@ -33,4 +33,6 @@ Tablet.defaultProps = {
   size: '24',
 };
 
+Tablet.displayName = 'Tablet';
+
 export default forwardRef(Tablet);

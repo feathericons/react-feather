@@ -38,4 +38,6 @@ CloudSnow.defaultProps = {
   size: '24',
 };
 
+CloudSnow.displayName = 'CloudSnow';
+
 export default forwardRef(CloudSnow);

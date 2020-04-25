@@ -32,4 +32,6 @@ Bluetooth.defaultProps = {
   size: '24',
 };
 
+Bluetooth.displayName = 'Bluetooth';
+
 export default forwardRef(Bluetooth);

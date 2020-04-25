@@ -34,4 +34,6 @@ Anchor.defaultProps = {
   size: '24',
 };
 
+Anchor.displayName = 'Anchor';
+
 export default forwardRef(Anchor);

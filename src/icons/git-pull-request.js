@@ -35,4 +35,6 @@ GitPullRequest.defaultProps = {
   size: '24',
 };
 
+GitPullRequest.displayName = 'GitPullRequest';
+
 export default forwardRef(GitPullRequest);

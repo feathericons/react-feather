@@ -33,4 +33,6 @@ MinusSquare.defaultProps = {
   size: '24',
 };
 
+MinusSquare.displayName = 'MinusSquare';
+
 export default forwardRef(MinusSquare);

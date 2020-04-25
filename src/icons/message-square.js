@@ -32,4 +32,6 @@ MessageSquare.defaultProps = {
   size: '24',
 };
 
+MessageSquare.displayName = 'MessageSquare';
+
 export default forwardRef(MessageSquare);

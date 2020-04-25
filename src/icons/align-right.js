@@ -35,4 +35,6 @@ AlignRight.defaultProps = {
   size: '24',
 };
 
+AlignRight.displayName = 'AlignRight';
+
 export default forwardRef(AlignRight);

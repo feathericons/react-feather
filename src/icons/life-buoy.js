@@ -38,4 +38,6 @@ LifeBuoy.defaultProps = {
   size: '24',
 };
 
+LifeBuoy.displayName = 'LifeBuoy';
+
 export default forwardRef(LifeBuoy);

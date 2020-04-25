@@ -33,4 +33,6 @@ Battery.defaultProps = {
   size: '24',
 };
 
+Battery.displayName = 'Battery';
+
 export default forwardRef(Battery);

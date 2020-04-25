@@ -34,4 +34,6 @@ FileMinus.defaultProps = {
   size: '24',
 };
 
+FileMinus.displayName = 'FileMinus';
+
 export default forwardRef(FileMinus);

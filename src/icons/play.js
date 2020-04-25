@@ -32,4 +32,6 @@ Play.defaultProps = {
   size: '24',
 };
 
+Play.displayName = 'Play';
+
 export default forwardRef(Play);

@@ -33,4 +33,6 @@ Youtube.defaultProps = {
   size: '24',
 };
 
+Youtube.displayName = 'Youtube';
+
 export default forwardRef(Youtube);

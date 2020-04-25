@@ -33,4 +33,6 @@ Settings.defaultProps = {
   size: '24',
 };
 
+Settings.displayName = 'Settings';
+
 export default forwardRef(Settings);

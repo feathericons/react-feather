@@ -34,4 +34,6 @@ UserMinus.defaultProps = {
   size: '24',
 };
 
+UserMinus.displayName = 'UserMinus';
+
 export default forwardRef(UserMinus);

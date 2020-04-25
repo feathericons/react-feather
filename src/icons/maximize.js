@@ -32,4 +32,6 @@ Maximize.defaultProps = {
   size: '24',
 };
 
+Maximize.displayName = 'Maximize';
+
 export default forwardRef(Maximize);

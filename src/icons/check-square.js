@@ -33,4 +33,6 @@ CheckSquare.defaultProps = {
   size: '24',
 };
 
+CheckSquare.displayName = 'CheckSquare';
+
 export default forwardRef(CheckSquare);

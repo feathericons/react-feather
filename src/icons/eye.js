@@ -33,4 +33,6 @@ Eye.defaultProps = {
   size: '24',
 };
 
+Eye.displayName = 'Eye';
+
 export default forwardRef(Eye);

@@ -32,4 +32,6 @@ Triangle.defaultProps = {
   size: '24',
 };
 
+Triangle.displayName = 'Triangle';
+
 export default forwardRef(Triangle);

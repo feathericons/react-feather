@@ -33,4 +33,6 @@ EyeOff.defaultProps = {
   size: '24',
 };
 
+EyeOff.displayName = 'EyeOff';
+
 export default forwardRef(EyeOff);

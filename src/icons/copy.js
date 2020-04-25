@@ -33,4 +33,6 @@ Copy.defaultProps = {
   size: '24',
 };
 
+Copy.displayName = 'Copy';
+
 export default forwardRef(Copy);

@@ -33,4 +33,6 @@ Camera.defaultProps = {
   size: '24',
 };
 
+Camera.displayName = 'Camera';
+
 export default forwardRef(Camera);

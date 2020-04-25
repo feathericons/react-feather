@@ -32,4 +32,6 @@ Cloud.defaultProps = {
   size: '24',
 };
 
+Cloud.displayName = 'Cloud';
+
 export default forwardRef(Cloud);

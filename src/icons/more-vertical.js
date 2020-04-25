@@ -34,4 +34,6 @@ MoreVertical.defaultProps = {
   size: '24',
 };
 
+MoreVertical.displayName = 'MoreVertical';
+
 export default forwardRef(MoreVertical);

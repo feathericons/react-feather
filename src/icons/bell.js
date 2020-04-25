@@ -33,4 +33,6 @@ Bell.defaultProps = {
   size: '24',
 };
 
+Bell.displayName = 'Bell';
+
 export default forwardRef(Bell);

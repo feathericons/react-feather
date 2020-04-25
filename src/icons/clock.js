@@ -33,4 +33,6 @@ Clock.defaultProps = {
   size: '24',
 };
 
+Clock.displayName = 'Clock';
+
 export default forwardRef(Clock);

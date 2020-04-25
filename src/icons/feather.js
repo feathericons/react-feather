@@ -34,4 +34,6 @@ Feather.defaultProps = {
   size: '24',
 };
 
+Feather.displayName = 'Feather';
+
 export default forwardRef(Feather);

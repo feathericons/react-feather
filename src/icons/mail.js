@@ -33,4 +33,6 @@ Mail.defaultProps = {
   size: '24',
 };
 
+Mail.displayName = 'Mail';
+
 export default forwardRef(Mail);

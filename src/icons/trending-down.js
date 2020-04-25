@@ -33,4 +33,6 @@ TrendingDown.defaultProps = {
   size: '24',
 };
 
+TrendingDown.displayName = 'TrendingDown';
+
 export default forwardRef(TrendingDown);

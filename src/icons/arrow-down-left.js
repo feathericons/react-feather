@@ -33,4 +33,6 @@ ArrowDownLeft.defaultProps = {
   size: '24',
 };
 
+ArrowDownLeft.displayName = 'ArrowDownLeft';
+
 export default forwardRef(ArrowDownLeft);

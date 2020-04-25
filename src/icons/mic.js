@@ -35,4 +35,6 @@ Mic.defaultProps = {
   size: '24',
 };
 
+Mic.displayName = 'Mic';
+
 export default forwardRef(Mic);

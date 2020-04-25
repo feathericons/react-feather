@@ -35,4 +35,6 @@ Trash2.defaultProps = {
   size: '24',
 };
 
+Trash2.displayName = 'Trash2';
+
 export default forwardRef(Trash2);

@@ -35,4 +35,6 @@ Meh.defaultProps = {
   size: '24',
 };
 
+Meh.displayName = 'Meh';
+
 export default forwardRef(Meh);

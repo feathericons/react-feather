@@ -32,4 +32,6 @@ Shield.defaultProps = {
   size: '24',
 };
 
+Shield.displayName = 'Shield';
+
 export default forwardRef(Shield);

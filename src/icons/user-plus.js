@@ -35,4 +35,6 @@ UserPlus.defaultProps = {
   size: '24',
 };
 
+UserPlus.displayName = 'UserPlus';
+
 export default forwardRef(UserPlus);

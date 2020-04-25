@@ -40,4 +40,6 @@ Sun.defaultProps = {
   size: '24',
 };
 
+Sun.displayName = 'Sun';
+
 export default forwardRef(Sun);

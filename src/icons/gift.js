@@ -36,4 +36,6 @@ Gift.defaultProps = {
   size: '24',
 };
 
+Gift.displayName = 'Gift';
+
 export default forwardRef(Gift);

@@ -33,4 +33,6 @@ Edit3.defaultProps = {
   size: '24',
 };
 
+Edit3.displayName = 'Edit3';
+
 export default forwardRef(Edit3);

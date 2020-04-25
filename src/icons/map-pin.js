@@ -33,4 +33,6 @@ MapPin.defaultProps = {
   size: '24',
 };
 
+MapPin.displayName = 'MapPin';
+
 export default forwardRef(MapPin);

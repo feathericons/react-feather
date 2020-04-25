@@ -33,4 +33,6 @@ Compass.defaultProps = {
   size: '24',
 };
 
+Compass.displayName = 'Compass';
+
 export default forwardRef(Compass);

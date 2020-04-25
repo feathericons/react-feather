@@ -34,4 +34,6 @@ Printer.defaultProps = {
   size: '24',
 };
 
+Printer.displayName = 'Printer';
+
 export default forwardRef(Printer);

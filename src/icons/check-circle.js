@@ -33,4 +33,6 @@ CheckCircle.defaultProps = {
   size: '24',
 };
 
+CheckCircle.displayName = 'CheckCircle';
+
 export default forwardRef(CheckCircle);

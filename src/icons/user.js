@@ -33,4 +33,6 @@ User.defaultProps = {
   size: '24',
 };
 
+User.displayName = 'User';
+
 export default forwardRef(User);

@@ -39,4 +39,6 @@ Loader.defaultProps = {
   size: '24',
 };
 
+Loader.displayName = 'Loader';
+
 export default forwardRef(Loader);

@@ -34,4 +34,6 @@ Watch.defaultProps = {
   size: '24',
 };
 
+Watch.displayName = 'Watch';
+
 export default forwardRef(Watch);

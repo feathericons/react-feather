@@ -33,4 +33,6 @@ DollarSign.defaultProps = {
   size: '24',
 };
 
+DollarSign.displayName = 'DollarSign';
+
 export default forwardRef(DollarSign);

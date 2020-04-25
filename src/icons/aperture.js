@@ -38,4 +38,6 @@ Aperture.defaultProps = {
   size: '24',
 };
 
+Aperture.displayName = 'Aperture';
+
 export default forwardRef(Aperture);

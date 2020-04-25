@@ -33,4 +33,6 @@ Headphones.defaultProps = {
   size: '24',
 };
 
+Headphones.displayName = 'Headphones';
+
 export default forwardRef(Headphones);

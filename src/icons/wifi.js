@@ -35,4 +35,6 @@ Wifi.defaultProps = {
   size: '24',
 };
 
+Wifi.displayName = 'Wifi';
+
 export default forwardRef(Wifi);

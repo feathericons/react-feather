@@ -33,4 +33,6 @@ Code.defaultProps = {
   size: '24',
 };
 
+Code.displayName = 'Code';
+
 export default forwardRef(Code);

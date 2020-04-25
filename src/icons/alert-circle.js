@@ -34,4 +34,6 @@ AlertCircle.defaultProps = {
   size: '24',
 };
 
+AlertCircle.displayName = 'AlertCircle';
+
 export default forwardRef(AlertCircle);

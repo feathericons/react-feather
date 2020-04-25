@@ -35,4 +35,6 @@ Server.defaultProps = {
   size: '24',
 };
 
+Server.displayName = 'Server';
+
 export default forwardRef(Server);

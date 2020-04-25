@@ -33,4 +33,6 @@ TrendingUp.defaultProps = {
   size: '24',
 };
 
+TrendingUp.displayName = 'TrendingUp';
+
 export default forwardRef(TrendingUp);

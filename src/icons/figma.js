@@ -36,4 +36,6 @@ Figma.defaultProps = {
   size: '24',
 };
 
+Figma.displayName = 'Figma';
+
 export default forwardRef(Figma);

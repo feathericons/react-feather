@@ -40,4 +40,6 @@ Sliders.defaultProps = {
   size: '24',
 };
 
+Sliders.displayName = 'Sliders';
+
 export default forwardRef(Sliders);

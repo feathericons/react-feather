@@ -33,4 +33,6 @@ Cast.defaultProps = {
   size: '24',
 };
 
+Cast.displayName = 'Cast';
+
 export default forwardRef(Cast);

@@ -35,4 +35,6 @@ ZapOff.defaultProps = {
   size: '24',
 };
 
+ZapOff.displayName = 'ZapOff';
+
 export default forwardRef(ZapOff);

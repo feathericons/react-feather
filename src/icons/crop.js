@@ -33,4 +33,6 @@ Crop.defaultProps = {
   size: '24',
 };
 
+Crop.displayName = 'Crop';
+
 export default forwardRef(Crop);

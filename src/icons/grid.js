@@ -35,4 +35,6 @@ Grid.defaultProps = {
   size: '24',
 };
 
+Grid.displayName = 'Grid';
+
 export default forwardRef(Grid);

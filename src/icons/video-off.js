@@ -33,4 +33,6 @@ VideoOff.defaultProps = {
   size: '24',
 };
 
+VideoOff.displayName = 'VideoOff';
+
 export default forwardRef(VideoOff);

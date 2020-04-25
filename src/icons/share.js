@@ -34,4 +34,6 @@ Share.defaultProps = {
   size: '24',
 };
 
+Share.displayName = 'Share';
+
 export default forwardRef(Share);

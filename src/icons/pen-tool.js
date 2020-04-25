@@ -35,4 +35,6 @@ PenTool.defaultProps = {
   size: '24',
 };
 
+PenTool.displayName = 'PenTool';
+
 export default forwardRef(PenTool);

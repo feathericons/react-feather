@@ -36,4 +36,6 @@ Coffee.defaultProps = {
   size: '24',
 };
 
+Coffee.displayName = 'Coffee';
+
 export default forwardRef(Coffee);

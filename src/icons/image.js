@@ -34,4 +34,6 @@ Image.defaultProps = {
   size: '24',
 };
 
+Image.displayName = 'Image';
+
 export default forwardRef(Image);

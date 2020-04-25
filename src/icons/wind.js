@@ -32,4 +32,6 @@ Wind.defaultProps = {
   size: '24',
 };
 
+Wind.displayName = 'Wind';
+
 export default forwardRef(Wind);

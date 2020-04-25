@@ -34,4 +34,6 @@ GitCommit.defaultProps = {
   size: '24',
 };
 
+GitCommit.displayName = 'GitCommit';
+
 export default forwardRef(GitCommit);

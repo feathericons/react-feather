@@ -35,4 +35,6 @@ GitBranch.defaultProps = {
   size: '24',
 };
 
+GitBranch.displayName = 'GitBranch';
+
 export default forwardRef(GitBranch);

@@ -36,4 +36,6 @@ Scissors.defaultProps = {
   size: '24',
 };
 
+Scissors.displayName = 'Scissors';
+
 export default forwardRef(Scissors);

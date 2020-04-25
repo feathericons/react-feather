@@ -33,4 +33,6 @@ Pause.defaultProps = {
   size: '24',
 };
 
+Pause.displayName = 'Pause';
+
 export default forwardRef(Pause);

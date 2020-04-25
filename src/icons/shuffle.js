@@ -36,4 +36,6 @@ Shuffle.defaultProps = {
   size: '24',
 };
 
+Shuffle.displayName = 'Shuffle';
+
 export default forwardRef(Shuffle);

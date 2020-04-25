@@ -35,4 +35,6 @@ Repeat.defaultProps = {
   size: '24',
 };
 
+Repeat.displayName = 'Repeat';
+
 export default forwardRef(Repeat);

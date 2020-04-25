@@ -34,4 +34,6 @@ ArrowDownCircle.defaultProps = {
   size: '24',
 };
 
+ArrowDownCircle.displayName = 'ArrowDownCircle';
+
 export default forwardRef(ArrowDownCircle);

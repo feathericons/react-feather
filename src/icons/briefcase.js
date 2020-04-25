@@ -33,4 +33,6 @@ Briefcase.defaultProps = {
   size: '24',
 };
 
+Briefcase.displayName = 'Briefcase';
+
 export default forwardRef(Briefcase);

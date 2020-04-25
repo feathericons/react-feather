@@ -33,4 +33,6 @@ Slash.defaultProps = {
   size: '24',
 };
 
+Slash.displayName = 'Slash';
+
 export default forwardRef(Slash);

@@ -35,4 +35,6 @@ Hash.defaultProps = {
   size: '24',
 };
 
+Hash.displayName = 'Hash';
+
 export default forwardRef(Hash);

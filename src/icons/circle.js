@@ -32,4 +32,6 @@ Circle.defaultProps = {
   size: '24',
 };
 
+Circle.displayName = 'Circle';
+
 export default forwardRef(Circle);

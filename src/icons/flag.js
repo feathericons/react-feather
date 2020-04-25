@@ -33,4 +33,6 @@ Flag.defaultProps = {
   size: '24',
 };
 
+Flag.displayName = 'Flag';
+
 export default forwardRef(Flag);

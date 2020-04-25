@@ -32,4 +32,6 @@ Columns.defaultProps = {
   size: '24',
 };
 
+Columns.displayName = 'Columns';
+
 export default forwardRef(Columns);

@@ -35,4 +35,6 @@ Smile.defaultProps = {
   size: '24',
 };
 
+Smile.displayName = 'Smile';
+
 export default forwardRef(Smile);

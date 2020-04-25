@@ -32,4 +32,6 @@ Droplet.defaultProps = {
   size: '24',
 };
 
+Droplet.displayName = 'Droplet';
+
 export default forwardRef(Droplet);

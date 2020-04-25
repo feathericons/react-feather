@@ -32,4 +32,6 @@ Tool.defaultProps = {
   size: '24',
 };
 
+Tool.displayName = 'Tool';
+
 export default forwardRef(Tool);

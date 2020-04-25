@@ -33,4 +33,6 @@ CornerLeftUp.defaultProps = {
   size: '24',
 };
 
+CornerLeftUp.displayName = 'CornerLeftUp';
+
 export default forwardRef(CornerLeftUp);

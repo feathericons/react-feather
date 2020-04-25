@@ -32,4 +32,6 @@ ThumbsDown.defaultProps = {
   size: '24',
 };
 
+ThumbsDown.displayName = 'ThumbsDown';
+
 export default forwardRef(ThumbsDown);

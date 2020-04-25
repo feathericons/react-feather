@@ -34,4 +34,6 @@ Info.defaultProps = {
   size: '24',
 };
 
+Info.displayName = 'Info';
+
 export default forwardRef(Info);

@@ -34,4 +34,6 @@ Map.defaultProps = {
   size: '24',
 };
 
+Map.displayName = 'Map';
+
 export default forwardRef(Map);

@@ -34,4 +34,6 @@ AlertOctagon.defaultProps = {
   size: '24',
 };
 
+AlertOctagon.displayName = 'AlertOctagon';
+
 export default forwardRef(AlertOctagon);

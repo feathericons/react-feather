@@ -32,4 +32,6 @@ Check.defaultProps = {
   size: '24',
 };
 
+Check.displayName = 'Check';
+
 export default forwardRef(Check);

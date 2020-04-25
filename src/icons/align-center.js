@@ -35,4 +35,6 @@ AlignCenter.defaultProps = {
   size: '24',
 };
 
+AlignCenter.displayName = 'AlignCenter';
+
 export default forwardRef(AlignCenter);

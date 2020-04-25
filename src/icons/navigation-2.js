@@ -32,4 +32,6 @@ Navigation2.defaultProps = {
   size: '24',
 };
 
+Navigation2.displayName = 'Navigation2';
+
 export default forwardRef(Navigation2);

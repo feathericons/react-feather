@@ -34,4 +34,6 @@ Rss.defaultProps = {
   size: '24',
 };
 
+Rss.displayName = 'Rss';
+
 export default forwardRef(Rss);

@@ -34,4 +34,6 @@ Voicemail.defaultProps = {
   size: '24',
 };
 
+Voicemail.displayName = 'Voicemail';
+
 export default forwardRef(Voicemail);

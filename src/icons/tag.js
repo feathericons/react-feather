@@ -33,4 +33,6 @@ Tag.defaultProps = {
   size: '24',
 };
 
+Tag.displayName = 'Tag';
+
 export default forwardRef(Tag);

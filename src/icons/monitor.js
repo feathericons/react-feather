@@ -34,4 +34,6 @@ Monitor.defaultProps = {
   size: '24',
 };
 
+Monitor.displayName = 'Monitor';
+
 export default forwardRef(Monitor);

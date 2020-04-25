@@ -33,4 +33,6 @@ PlayCircle.defaultProps = {
   size: '24',
 };
 
+PlayCircle.displayName = 'PlayCircle';
+
 export default forwardRef(PlayCircle);

@@ -35,4 +35,6 @@ CloudRain.defaultProps = {
   size: '24',
 };
 
+CloudRain.displayName = 'CloudRain';
+
 export default forwardRef(CloudRain);

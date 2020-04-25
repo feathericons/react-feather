@@ -33,4 +33,6 @@ CloudLightning.defaultProps = {
   size: '24',
 };
 
+CloudLightning.displayName = 'CloudLightning';
+
 export default forwardRef(CloudLightning);

@@ -34,4 +34,6 @@ DownloadCloud.defaultProps = {
   size: '24',
 };
 
+DownloadCloud.displayName = 'DownloadCloud';
+
 export default forwardRef(DownloadCloud);

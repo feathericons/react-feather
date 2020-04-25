@@ -32,4 +32,6 @@ GitHub.defaultProps = {
   size: '24',
 };
 
+GitHub.displayName = 'GitHub';
+
 export default forwardRef(GitHub);

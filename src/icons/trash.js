@@ -33,4 +33,6 @@ Trash.defaultProps = {
   size: '24',
 };
 
+Trash.displayName = 'Trash';
+
 export default forwardRef(Trash);

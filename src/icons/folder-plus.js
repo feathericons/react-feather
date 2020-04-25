@@ -34,4 +34,6 @@ FolderPlus.defaultProps = {
   size: '24',
 };
 
+FolderPlus.displayName = 'FolderPlus';
+
 export default forwardRef(FolderPlus);

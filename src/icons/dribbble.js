@@ -33,4 +33,6 @@ Dribbble.defaultProps = {
   size: '24',
 };
 
+Dribbble.displayName = 'Dribbble';
+
 export default forwardRef(Dribbble);

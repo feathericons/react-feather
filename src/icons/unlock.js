@@ -33,4 +33,6 @@ Unlock.defaultProps = {
   size: '24',
 };
 
+Unlock.displayName = 'Unlock';
+
 export default forwardRef(Unlock);

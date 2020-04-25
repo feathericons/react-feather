@@ -34,4 +34,6 @@ ArrowUpCircle.defaultProps = {
   size: '24',
 };
 
+ArrowUpCircle.displayName = 'ArrowUpCircle';
+
 export default forwardRef(ArrowUpCircle);

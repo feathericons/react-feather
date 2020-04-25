@@ -32,4 +32,6 @@ Filter.defaultProps = {
   size: '24',
 };
 
+Filter.displayName = 'Filter';
+
 export default forwardRef(Filter);

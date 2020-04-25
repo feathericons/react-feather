@@ -32,4 +32,6 @@ Paperclip.defaultProps = {
   size: '24',
 };
 
+Paperclip.displayName = 'Paperclip';
+
 export default forwardRef(Paperclip);

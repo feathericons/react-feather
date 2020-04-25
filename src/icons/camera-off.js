@@ -33,4 +33,6 @@ CameraOff.defaultProps = {
   size: '24',
 };
 
+CameraOff.displayName = 'CameraOff';
+
 export default forwardRef(CameraOff);

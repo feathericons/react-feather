@@ -33,4 +33,6 @@ Plus.defaultProps = {
   size: '24',
 };
 
+Plus.displayName = 'Plus';
+
 export default forwardRef(Plus);

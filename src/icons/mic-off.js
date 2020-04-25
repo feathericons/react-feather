@@ -36,4 +36,6 @@ MicOff.defaultProps = {
   size: '24',
 };
 
+MicOff.displayName = 'MicOff';
+
 export default forwardRef(MicOff);

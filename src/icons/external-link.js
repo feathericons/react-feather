@@ -34,4 +34,6 @@ ExternalLink.defaultProps = {
   size: '24',
 };
 
+ExternalLink.displayName = 'ExternalLink';
+
 export default forwardRef(ExternalLink);

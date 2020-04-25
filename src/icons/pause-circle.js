@@ -34,4 +34,6 @@ PauseCircle.defaultProps = {
   size: '24',
 };
 
+PauseCircle.displayName = 'PauseCircle';
+
 export default forwardRef(PauseCircle);

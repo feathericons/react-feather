@@ -32,4 +32,6 @@ Twitch.defaultProps = {
   size: '24',
 };
 
+Twitch.displayName = 'Twitch';
+
 export default forwardRef(Twitch);

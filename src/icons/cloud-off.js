@@ -33,4 +33,6 @@ CloudOff.defaultProps = {
   size: '24',
 };
 
+CloudOff.displayName = 'CloudOff';
+
 export default forwardRef(CloudOff);

@@ -35,4 +35,6 @@ AlignLeft.defaultProps = {
   size: '24',
 };
 
+AlignLeft.displayName = 'AlignLeft';
+
 export default forwardRef(AlignLeft);

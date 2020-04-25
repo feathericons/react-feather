@@ -32,4 +32,6 @@ Square.defaultProps = {
   size: '24',
 };
 
+Square.displayName = 'Square';
+
 export default forwardRef(Square);

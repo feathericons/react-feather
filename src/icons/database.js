@@ -34,4 +34,6 @@ Database.defaultProps = {
   size: '24',
 };
 
+Database.displayName = 'Database';
+
 export default forwardRef(Database);

@@ -34,4 +34,6 @@ Layers.defaultProps = {
   size: '24',
 };
 
+Layers.displayName = 'Layers';
+
 export default forwardRef(Layers);

@@ -33,4 +33,6 @@ ToggleLeft.defaultProps = {
   size: '24',
 };
 
+ToggleLeft.displayName = 'ToggleLeft';
+
 export default forwardRef(ToggleLeft);

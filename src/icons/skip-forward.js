@@ -33,4 +33,6 @@ SkipForward.defaultProps = {
   size: '24',
 };
 
+SkipForward.displayName = 'SkipForward';
+
 export default forwardRef(SkipForward);

@@ -34,4 +34,6 @@ Box.defaultProps = {
   size: '24',
 };
 
+Box.displayName = 'Box';
+
 export default forwardRef(Box);

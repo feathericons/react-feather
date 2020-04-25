@@ -34,4 +34,6 @@ Upload.defaultProps = {
   size: '24',
 };
 
+Upload.displayName = 'Upload';
+
 export default forwardRef(Upload);

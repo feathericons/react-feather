@@ -35,4 +35,6 @@ Minimize2.defaultProps = {
   size: '24',
 };
 
+Minimize2.displayName = 'Minimize2';
+
 export default forwardRef(Minimize2);

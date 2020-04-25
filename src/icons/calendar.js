@@ -35,4 +35,6 @@ Calendar.defaultProps = {
   size: '24',
 };
 
+Calendar.displayName = 'Calendar';
+
 export default forwardRef(Calendar);

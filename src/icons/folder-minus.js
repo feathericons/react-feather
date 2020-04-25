@@ -33,4 +33,6 @@ FolderMinus.defaultProps = {
   size: '24',
 };
 
+FolderMinus.displayName = 'FolderMinus';
+
 export default forwardRef(FolderMinus);

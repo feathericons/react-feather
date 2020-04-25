@@ -32,4 +32,6 @@ Moon.defaultProps = {
   size: '24',
 };
 
+Moon.displayName = 'Moon';
+
 export default forwardRef(Moon);

@@ -32,4 +32,6 @@ Folder.defaultProps = {
   size: '24',
 };
 
+Folder.displayName = 'Folder';
+
 export default forwardRef(Folder);

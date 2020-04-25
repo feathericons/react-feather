@@ -37,4 +37,6 @@ Move.defaultProps = {
   size: '24',
 };
 
+Move.displayName = 'Move';
+
 export default forwardRef(Move);

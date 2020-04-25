@@ -33,4 +33,6 @@ AtSign.defaultProps = {
   size: '24',
 };
 
+AtSign.displayName = 'AtSign';
+
 export default forwardRef(AtSign);

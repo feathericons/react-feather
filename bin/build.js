@@ -88,6 +88,8 @@ icons.forEach((i) => {
       size: '24',
     }
 
+    ${ComponentName}.displayName = '${ComponentName}'
+
     export default forwardRef(${ComponentName})
   `;
 

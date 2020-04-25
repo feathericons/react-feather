@@ -33,4 +33,6 @@ MousePointer.defaultProps = {
   size: '24',
 };
 
+MousePointer.displayName = 'MousePointer';
+
 export default forwardRef(MousePointer);

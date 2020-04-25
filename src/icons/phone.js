@@ -32,4 +32,6 @@ Phone.defaultProps = {
   size: '24',
 };
 
+Phone.displayName = 'Phone';
+
 export default forwardRef(Phone);

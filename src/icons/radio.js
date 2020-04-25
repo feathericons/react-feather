@@ -33,4 +33,6 @@ Radio.defaultProps = {
   size: '24',
 };
 
+Radio.displayName = 'Radio';
+
 export default forwardRef(Radio);

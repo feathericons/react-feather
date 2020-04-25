@@ -39,4 +39,6 @@ Slack.defaultProps = {
   size: '24',
 };
 
+Slack.displayName = 'Slack';
+
 export default forwardRef(Slack);

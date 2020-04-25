@@ -32,4 +32,6 @@ Facebook.defaultProps = {
   size: '24',
 };
 
+Facebook.displayName = 'Facebook';
+
 export default forwardRef(Facebook);

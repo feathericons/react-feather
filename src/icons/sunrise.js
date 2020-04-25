@@ -39,4 +39,6 @@ Sunrise.defaultProps = {
   size: '24',
 };
 
+Sunrise.displayName = 'Sunrise';
+
 export default forwardRef(Sunrise);

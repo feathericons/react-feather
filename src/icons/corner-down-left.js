@@ -33,4 +33,6 @@ CornerDownLeft.defaultProps = {
   size: '24',
 };
 
+CornerDownLeft.displayName = 'CornerDownLeft';
+
 export default forwardRef(CornerDownLeft);

@@ -36,4 +36,6 @@ FileText.defaultProps = {
   size: '24',
 };
 
+FileText.displayName = 'FileText';
+
 export default forwardRef(FileText);

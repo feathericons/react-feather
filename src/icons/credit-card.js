@@ -33,4 +33,6 @@ CreditCard.defaultProps = {
   size: '24',
 };
 
+CreditCard.displayName = 'CreditCard';
+
 export default forwardRef(CreditCard);

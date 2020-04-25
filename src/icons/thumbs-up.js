@@ -32,4 +32,6 @@ ThumbsUp.defaultProps = {
   size: '24',
 };
 
+ThumbsUp.displayName = 'ThumbsUp';
+
 export default forwardRef(ThumbsUp);

@@ -35,4 +35,6 @@ Truck.defaultProps = {
   size: '24',
 };
 
+Truck.displayName = 'Truck';
+
 export default forwardRef(Truck);

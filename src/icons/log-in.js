@@ -34,4 +34,6 @@ LogIn.defaultProps = {
   size: '24',
 };
 
+LogIn.displayName = 'LogIn';
+
 export default forwardRef(LogIn);

@@ -32,4 +32,6 @@ MessageCircle.defaultProps = {
   size: '24',
 };
 
+MessageCircle.displayName = 'MessageCircle';
+
 export default forwardRef(MessageCircle);

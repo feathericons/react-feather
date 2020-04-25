@@ -35,4 +35,6 @@ DivideCircle.defaultProps = {
   size: '24',
 };
 
+DivideCircle.displayName = 'DivideCircle';
+
 export default forwardRef(DivideCircle);

@@ -34,4 +34,6 @@ PlusCircle.defaultProps = {
   size: '24',
 };
 
+PlusCircle.displayName = 'PlusCircle';
+
 export default forwardRef(PlusCircle);

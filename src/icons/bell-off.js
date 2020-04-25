@@ -36,4 +36,6 @@ BellOff.defaultProps = {
   size: '24',
 };
 
+BellOff.displayName = 'BellOff';
+
 export default forwardRef(BellOff);

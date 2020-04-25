@@ -32,4 +32,6 @@ Zap.defaultProps = {
   size: '24',
 };
 
+Zap.displayName = 'Zap';
+
 export default forwardRef(Zap);

@@ -35,4 +35,6 @@ AlignJustify.defaultProps = {
   size: '24',
 };
 
+AlignJustify.displayName = 'AlignJustify';
+
 export default forwardRef(AlignJustify);

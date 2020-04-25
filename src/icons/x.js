@@ -33,4 +33,6 @@ X.defaultProps = {
   size: '24',
 };
 
+X.displayName = 'X';
+
 export default forwardRef(X);

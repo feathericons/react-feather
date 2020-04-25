@@ -33,4 +33,6 @@ File.defaultProps = {
   size: '24',
 };
 
+File.displayName = 'File';
+
 export default forwardRef(File);

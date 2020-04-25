@@ -33,4 +33,6 @@ Sidebar.defaultProps = {
   size: '24',
 };
 
+Sidebar.displayName = 'Sidebar';
+
 export default forwardRef(Sidebar);

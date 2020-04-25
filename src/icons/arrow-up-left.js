@@ -33,4 +33,6 @@ ArrowUpLeft.defaultProps = {
   size: '24',
 };
 
+ArrowUpLeft.displayName = 'ArrowUpLeft';
+
 export default forwardRef(ArrowUpLeft);

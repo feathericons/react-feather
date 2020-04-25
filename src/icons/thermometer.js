@@ -32,4 +32,6 @@ Thermometer.defaultProps = {
   size: '24',
 };
 
+Thermometer.displayName = 'Thermometer';
+
 export default forwardRef(Thermometer);

@@ -35,4 +35,6 @@ FilePlus.defaultProps = {
   size: '24',
 };
 
+FilePlus.displayName = 'FilePlus';
+
 export default forwardRef(FilePlus);

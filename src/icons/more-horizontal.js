@@ -34,4 +34,6 @@ MoreHorizontal.defaultProps = {
   size: '24',
 };
 
+MoreHorizontal.displayName = 'MoreHorizontal';
+
 export default forwardRef(MoreHorizontal);

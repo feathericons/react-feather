@@ -32,4 +32,6 @@ Gitlab.defaultProps = {
   size: '24',
 };
 
+Gitlab.displayName = 'Gitlab';
+
 export default forwardRef(Gitlab);

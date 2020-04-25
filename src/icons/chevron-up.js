@@ -32,4 +32,6 @@ ChevronUp.defaultProps = {
   size: '24',
 };
 
+ChevronUp.displayName = 'ChevronUp';
+
 export default forwardRef(ChevronUp);

@@ -39,4 +39,6 @@ Film.defaultProps = {
   size: '24',
 };
 
+Film.displayName = 'Film';
+
 export default forwardRef(Film);

@@ -36,4 +36,6 @@ Chrome.defaultProps = {
   size: '24',
 };
 
+Chrome.displayName = 'Chrome';
+
 export default forwardRef(Chrome);

@@ -34,4 +34,6 @@ Delete.defaultProps = {
   size: '24',
 };
 
+Delete.displayName = 'Delete';
+
 export default forwardRef(Delete);

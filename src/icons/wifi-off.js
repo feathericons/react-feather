@@ -38,4 +38,6 @@ WifiOff.defaultProps = {
   size: '24',
 };
 
+WifiOff.displayName = 'WifiOff';
+
 export default forwardRef(WifiOff);

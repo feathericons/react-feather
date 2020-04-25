@@ -34,4 +34,6 @@ Divide.defaultProps = {
   size: '24',
 };
 
+Divide.displayName = 'Divide';
+
 export default forwardRef(Divide);

@@ -34,4 +34,6 @@ Download.defaultProps = {
   size: '24',
 };
 
+Download.displayName = 'Download';
+
 export default forwardRef(Download);

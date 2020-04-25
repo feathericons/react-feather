@@ -33,4 +33,6 @@ Tv.defaultProps = {
   size: '24',
 };
 
+Tv.displayName = 'Tv';
+
 export default forwardRef(Tv);

@@ -32,4 +32,6 @@ Octagon.defaultProps = {
   size: '24',
 };
 
+Octagon.displayName = 'Octagon';
+
 export default forwardRef(Octagon);

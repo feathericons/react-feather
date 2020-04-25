@@ -35,4 +35,6 @@ ZoomIn.defaultProps = {
   size: '24',
 };
 
+ZoomIn.displayName = 'ZoomIn';
+
 export default forwardRef(ZoomIn);

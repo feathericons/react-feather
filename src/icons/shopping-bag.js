@@ -34,4 +34,6 @@ ShoppingBag.defaultProps = {
   size: '24',
 };
 
+ShoppingBag.displayName = 'ShoppingBag';
+
 export default forwardRef(ShoppingBag);

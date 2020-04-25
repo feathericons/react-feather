@@ -37,4 +37,6 @@ Codesandbox.defaultProps = {
   size: '24',
 };
 
+Codesandbox.displayName = 'Codesandbox';
+
 export default forwardRef(Codesandbox);

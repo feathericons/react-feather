@@ -34,4 +34,6 @@ BarChart.defaultProps = {
   size: '24',
 };
 
+BarChart.displayName = 'BarChart';
+
 export default forwardRef(BarChart);

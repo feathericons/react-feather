@@ -34,4 +34,6 @@ Instagram.defaultProps = {
   size: '24',
 };
 
+Instagram.displayName = 'Instagram';
+
 export default forwardRef(Instagram);

@@ -35,4 +35,6 @@ DivideSquare.defaultProps = {
   size: '24',
 };
 
+DivideSquare.displayName = 'DivideSquare';
+
 export default forwardRef(DivideSquare);

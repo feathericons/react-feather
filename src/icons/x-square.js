@@ -34,4 +34,6 @@ XSquare.defaultProps = {
   size: '24',
 };
 
+XSquare.displayName = 'XSquare';
+
 export default forwardRef(XSquare);

@@ -32,4 +32,6 @@ Framer.defaultProps = {
   size: '24',
 };
 
+Framer.displayName = 'Framer';
+
 export default forwardRef(Framer);

@@ -34,4 +34,6 @@ XCircle.defaultProps = {
   size: '24',
 };
 
+XCircle.displayName = 'XCircle';
+
 export default forwardRef(XCircle);

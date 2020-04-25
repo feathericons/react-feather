@@ -33,4 +33,6 @@ Clipboard.defaultProps = {
   size: '24',
 };
 
+Clipboard.displayName = 'Clipboard';
+
 export default forwardRef(Clipboard);

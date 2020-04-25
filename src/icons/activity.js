@@ -32,4 +32,6 @@ Activity.defaultProps = {
   size: '24',
 };
 
+Activity.displayName = 'Activity';
+
 export default forwardRef(Activity);

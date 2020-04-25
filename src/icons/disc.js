@@ -33,4 +33,6 @@ Disc.defaultProps = {
   size: '24',
 };
 
+Disc.displayName = 'Disc';
+
 export default forwardRef(Disc);

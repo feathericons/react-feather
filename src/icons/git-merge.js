@@ -34,4 +34,6 @@ GitMerge.defaultProps = {
   size: '24',
 };
 
+GitMerge.displayName = 'GitMerge';
+
 export default forwardRef(GitMerge);

@@ -33,4 +33,6 @@ Rewind.defaultProps = {
   size: '24',
 };
 
+Rewind.displayName = 'Rewind';
+
 export default forwardRef(Rewind);

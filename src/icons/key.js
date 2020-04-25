@@ -32,4 +32,6 @@ Key.defaultProps = {
   size: '24',
 };
 
+Key.displayName = 'Key';
+
 export default forwardRef(Key);

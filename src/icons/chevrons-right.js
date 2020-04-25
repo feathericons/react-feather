@@ -33,4 +33,6 @@ ChevronsRight.defaultProps = {
   size: '24',
 };
 
+ChevronsRight.displayName = 'ChevronsRight';
+
 export default forwardRef(ChevronsRight);

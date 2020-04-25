@@ -41,4 +41,6 @@ Cpu.defaultProps = {
   size: '24',
 };
 
+Cpu.displayName = 'Cpu';
+
 export default forwardRef(Cpu);

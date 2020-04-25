@@ -33,4 +33,6 @@ Search.defaultProps = {
   size: '24',
 };
 
+Search.displayName = 'Search';
+
 export default forwardRef(Search);

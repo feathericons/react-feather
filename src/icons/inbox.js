@@ -33,4 +33,6 @@ Inbox.defaultProps = {
   size: '24',
 };
 
+Inbox.displayName = 'Inbox';
+
 export default forwardRef(Inbox);

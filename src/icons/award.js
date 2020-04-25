@@ -33,4 +33,6 @@ Award.defaultProps = {
   size: '24',
 };
 
+Award.displayName = 'Award';
+
 export default forwardRef(Award);

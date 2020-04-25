@@ -34,4 +34,6 @@ HelpCircle.defaultProps = {
   size: '24',
 };
 
+HelpCircle.displayName = 'HelpCircle';
+
 export default forwardRef(HelpCircle);

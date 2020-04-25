@@ -34,4 +34,6 @@ UserCheck.defaultProps = {
   size: '24',
 };
 
+UserCheck.displayName = 'UserCheck';
+
 export default forwardRef(UserCheck);

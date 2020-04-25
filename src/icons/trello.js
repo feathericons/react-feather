@@ -34,4 +34,6 @@ Trello.defaultProps = {
   size: '24',
 };
 
+Trello.displayName = 'Trello';
+
 export default forwardRef(Trello);

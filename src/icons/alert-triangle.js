@@ -34,4 +34,6 @@ AlertTriangle.defaultProps = {
   size: '24',
 };
 
+AlertTriangle.displayName = 'AlertTriangle';
+
 export default forwardRef(AlertTriangle);

@@ -33,4 +33,6 @@ PieChart.defaultProps = {
   size: '24',
 };
 
+PieChart.displayName = 'PieChart';
+
 export default forwardRef(PieChart);

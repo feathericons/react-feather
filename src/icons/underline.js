@@ -33,4 +33,6 @@ Underline.defaultProps = {
   size: '24',
 };
 
+Underline.displayName = 'Underline';
+
 export default forwardRef(Underline);

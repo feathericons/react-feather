@@ -33,4 +33,6 @@ Lock.defaultProps = {
   size: '24',
 };
 
+Lock.displayName = 'Lock';
+
 export default forwardRef(Lock);

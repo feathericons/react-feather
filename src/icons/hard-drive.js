@@ -35,4 +35,6 @@ HardDrive.defaultProps = {
   size: '24',
 };
 
+HardDrive.displayName = 'HardDrive';
+
 export default forwardRef(HardDrive);

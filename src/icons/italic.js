@@ -34,4 +34,6 @@ Italic.defaultProps = {
   size: '24',
 };
 
+Italic.displayName = 'Italic';
+
 export default forwardRef(Italic);

@@ -34,4 +34,6 @@ Archive.defaultProps = {
   size: '24',
 };
 
+Archive.displayName = 'Archive';
+
 export default forwardRef(Archive);

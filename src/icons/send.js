@@ -33,4 +33,6 @@ Send.defaultProps = {
   size: '24',
 };
 
+Send.displayName = 'Send';
+
 export default forwardRef(Send);

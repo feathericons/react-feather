@@ -36,4 +36,6 @@ Crosshair.defaultProps = {
   size: '24',
 };
 
+Crosshair.displayName = 'Crosshair';
+
 export default forwardRef(Crosshair);

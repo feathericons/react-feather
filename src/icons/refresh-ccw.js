@@ -34,4 +34,6 @@ RefreshCcw.defaultProps = {
   size: '24',
 };
 
+RefreshCcw.displayName = 'RefreshCcw';
+
 export default forwardRef(RefreshCcw);

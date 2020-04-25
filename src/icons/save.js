@@ -34,4 +34,6 @@ Save.defaultProps = {
   size: '24',
 };
 
+Save.displayName = 'Save';
+
 export default forwardRef(Save);

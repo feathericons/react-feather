@@ -32,4 +32,6 @@ Heart.defaultProps = {
   size: '24',
 };
 
+Heart.displayName = 'Heart';
+
 export default forwardRef(Heart);

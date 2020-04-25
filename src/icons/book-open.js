@@ -33,4 +33,6 @@ BookOpen.defaultProps = {
   size: '24',
 };
 
+BookOpen.displayName = 'BookOpen';
+
 export default forwardRef(BookOpen);

@@ -34,4 +34,6 @@ Layout.defaultProps = {
   size: '24',
 };
 
+Layout.displayName = 'Layout';
+
 export default forwardRef(Layout);
