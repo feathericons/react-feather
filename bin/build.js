@@ -17,14 +17,14 @@ if (!fs.existsSync(dir)) {
 }
 
 const initialTypeDefinitions = `/// <reference types="react" />
-import { ComponentType, SVGAttributes } from 'react';
+import { FC, SVGAttributes } from 'react';
 
 interface Props extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
 }
 
-type Icon = ComponentType<Props>;
+type Icon = FC<Props>;
 `;
 
 fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
