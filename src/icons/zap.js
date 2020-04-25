@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Zap = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Zap = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Zap = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
     </svg>
   );
-};
+});
 
 Zap.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Zap.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Zap.displayName = 'Zap';
 
-export default forwardRef(Zap);
+export default Zap;

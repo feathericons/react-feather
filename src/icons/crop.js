@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Crop = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Crop = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Crop = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15" />
       <path d="M1 6.13L16 6a2 2 0 0 1 2 2v15" />
     </svg>
   );
-};
+});
 
 Crop.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Crop.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Crop.displayName = 'Crop';
 
-export default forwardRef(Crop);
+export default Crop;

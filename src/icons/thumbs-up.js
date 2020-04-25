@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ThumbsUp = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const ThumbsUp = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const ThumbsUp = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3" />
     </svg>
   );
-};
+});
 
 ThumbsUp.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ThumbsUp.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 ThumbsUp.displayName = 'ThumbsUp';
 
-export default forwardRef(ThumbsUp);
+export default ThumbsUp;

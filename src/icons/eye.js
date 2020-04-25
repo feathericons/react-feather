@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Eye = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Eye = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Eye = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
       <circle cx="12" cy="12" r="3" />
     </svg>
   );
-};
+});
 
 Eye.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Eye.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Eye.displayName = 'Eye';
 
-export default forwardRef(Eye);
+export default Eye;

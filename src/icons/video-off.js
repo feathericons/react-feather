@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const VideoOff = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const VideoOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const VideoOff = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10" />
       <line x1="1" y1="1" x2="23" y2="23" />
     </svg>
   );
-};
+});
 
 VideoOff.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-VideoOff.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 VideoOff.displayName = 'VideoOff';
 
-export default forwardRef(VideoOff);
+export default VideoOff;

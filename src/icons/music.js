@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Music = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Music = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Music = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M9 18V5l12-2v13" />
       <circle cx="6" cy="18" r="3" />
       <circle cx="18" cy="16" r="3" />
     </svg>
   );
-};
+});
 
 Music.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Music.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Music.displayName = 'Music';
 
-export default forwardRef(Music);
+export default Music;

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ZapOff = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const ZapOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const ZapOff = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polyline points="12.41 6.75 13 2 10.57 4.92" />
       <polyline points="18.57 12.91 21 10 15.66 10" />
@@ -23,18 +22,13 @@ const ZapOff = (props, ref) => {
       <line x1="1" y1="1" x2="23" y2="23" />
     </svg>
   );
-};
+});
 
 ZapOff.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ZapOff.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 ZapOff.displayName = 'ZapOff';
 
-export default forwardRef(ZapOff);
+export default ZapOff;

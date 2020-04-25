@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Truck = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Truck = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Truck = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="1" y="3" width="15" height="13" />
       <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
@@ -23,18 +22,13 @@ const Truck = (props, ref) => {
       <circle cx="18.5" cy="18.5" r="2.5" />
     </svg>
   );
-};
+});
 
 Truck.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Truck.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Truck.displayName = 'Truck';
 
-export default forwardRef(Truck);
+export default Truck;

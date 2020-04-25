@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Columns = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Columns = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Columns = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18" />
     </svg>
   );
-};
+});
 
 Columns.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Columns.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Columns.displayName = 'Columns';
 
-export default forwardRef(Columns);
+export default Columns;

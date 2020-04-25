@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Percent = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Percent = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Percent = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="19" y1="5" x2="5" y2="19" />
       <circle cx="6.5" cy="6.5" r="2.5" />
       <circle cx="17.5" cy="17.5" r="2.5" />
     </svg>
   );
-};
+});
 
 Percent.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Percent.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Percent.displayName = 'Percent';
 
-export default forwardRef(Percent);
+export default Percent;

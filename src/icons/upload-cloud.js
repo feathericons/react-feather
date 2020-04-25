@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const UploadCloud = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const UploadCloud = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const UploadCloud = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polyline points="16 16 12 12 8 16" />
       <line x1="12" y1="12" x2="12" y2="21" />
@@ -23,18 +22,13 @@ const UploadCloud = (props, ref) => {
       <polyline points="16 16 12 12 8 16" />
     </svg>
   );
-};
+});
 
 UploadCloud.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-UploadCloud.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 UploadCloud.displayName = 'UploadCloud';
 
-export default forwardRef(UploadCloud);
+export default UploadCloud;

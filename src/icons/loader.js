@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Loader = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Loader = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Loader = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="12" y1="2" x2="12" y2="6" />
       <line x1="12" y1="18" x2="12" y2="22" />
@@ -27,18 +26,13 @@ const Loader = (props, ref) => {
       <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
     </svg>
   );
-};
+});
 
 Loader.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Loader.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Loader.displayName = 'Loader';
 
-export default forwardRef(Loader);
+export default Loader;

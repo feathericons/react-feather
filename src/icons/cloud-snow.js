@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CloudSnow = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const CloudSnow = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const CloudSnow = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25" />
       <line x1="8" y1="16" x2="8.01" y2="16" />
@@ -26,18 +25,13 @@ const CloudSnow = (props, ref) => {
       <line x1="16" y1="20" x2="16.01" y2="20" />
     </svg>
   );
-};
+});
 
 CloudSnow.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CloudSnow.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 CloudSnow.displayName = 'CloudSnow';
 
-export default forwardRef(CloudSnow);
+export default CloudSnow;

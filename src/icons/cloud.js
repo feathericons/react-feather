@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Cloud = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Cloud = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Cloud = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
     </svg>
   );
-};
+});
 
 Cloud.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Cloud.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Cloud.displayName = 'Cloud';
 
-export default forwardRef(Cloud);
+export default Cloud;

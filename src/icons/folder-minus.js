@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FolderMinus = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const FolderMinus = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const FolderMinus = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
       <line x1="9" y1="14" x2="15" y2="14" />
     </svg>
   );
-};
+});
 
 FolderMinus.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-FolderMinus.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 FolderMinus.displayName = 'FolderMinus';
 
-export default forwardRef(FolderMinus);
+export default FolderMinus;

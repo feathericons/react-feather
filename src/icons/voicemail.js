@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Voicemail = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Voicemail = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Voicemail = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="5.5" cy="11.5" r="4.5" />
       <circle cx="18.5" cy="11.5" r="4.5" />
       <line x1="5.5" y1="16" x2="18.5" y2="16" />
     </svg>
   );
-};
+});
 
 Voicemail.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Voicemail.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Voicemail.displayName = 'Voicemail';
 
-export default forwardRef(Voicemail);
+export default Voicemail;

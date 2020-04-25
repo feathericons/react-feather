@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Server = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Server = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Server = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
       <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
@@ -23,18 +22,13 @@ const Server = (props, ref) => {
       <line x1="6" y1="18" x2="6.01" y2="18" />
     </svg>
   );
-};
+});
 
 Server.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Server.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Server.displayName = 'Server';
 
-export default forwardRef(Server);
+export default Server;

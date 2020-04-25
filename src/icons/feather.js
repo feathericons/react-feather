@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Feather = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Feather = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Feather = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z" />
       <line x1="16" y1="8" x2="2" y2="22" />
       <line x1="17.5" y1="15" x2="9" y2="15" />
     </svg>
   );
-};
+});
 
 Feather.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Feather.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Feather.displayName = 'Feather';
 
-export default forwardRef(Feather);
+export default Feather;

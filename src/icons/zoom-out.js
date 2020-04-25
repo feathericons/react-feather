@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ZoomOut = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const ZoomOut = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const ZoomOut = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="11" cy="11" r="8" />
       <line x1="21" y1="21" x2="16.65" y2="16.65" />
       <line x1="8" y1="11" x2="14" y2="11" />
     </svg>
   );
-};
+});
 
 ZoomOut.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ZoomOut.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 ZoomOut.displayName = 'ZoomOut';
 
-export default forwardRef(ZoomOut);
+export default ZoomOut;

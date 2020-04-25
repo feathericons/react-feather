@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Framer = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Framer = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Framer = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M5 16V9h14V2H5l14 14h-7m-7 0l7 7v-7m-7 0h7" />
     </svg>
   );
-};
+});
 
 Framer.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Framer.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Framer.displayName = 'Framer';
 
-export default forwardRef(Framer);
+export default Framer;

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Delete = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Delete = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Delete = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" />
       <line x1="18" y1="9" x2="12" y2="15" />
       <line x1="12" y1="9" x2="18" y2="15" />
     </svg>
   );
-};
+});
 
 Delete.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Delete.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Delete.displayName = 'Delete';
 
-export default forwardRef(Delete);
+export default Delete;

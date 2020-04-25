@@ -39,8 +39,8 @@ const attrsToString = (attrs) => {
     if (key === 'width' || key === 'height' || key === 'stroke') {
       return key + '={' + attrs[key] + '}';
     }
-    if (key === 'otherProps') {
-      return '{...otherProps}';
+    if (key === 'rest') {
+      return '{...rest}';
     }
     return key + '="' + attrs[key] + '"';
   }).join(' ');
@@ -59,21 +59,20 @@ icons.forEach((i) => {
     strokeWidth: 2,
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
-    otherProps: '...otherProps',
+    rest: '...rest',
   };
 
   const element = `
     import React, {forwardRef} from 'react';
     import PropTypes from 'prop-types';
 
-    const ${ComponentName} = (props, ref) => {
-      const { color, size, ...otherProps } = props;
+    const ${ComponentName} = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
       return (
         <svg ref={ref} ${attrsToString(defaultAttrs)}>
           ${featherIcons[i]}
         </svg>
       )
-    };
+    });
 
     ${ComponentName}.propTypes = {
       color: PropTypes.string,
@@ -83,14 +82,9 @@ icons.forEach((i) => {
       ]),
     }
 
-    ${ComponentName}.defaultProps = {
-      color: 'currentColor',
-      size: '24',
-    }
-
     ${ComponentName}.displayName = '${ComponentName}'
 
-    export default forwardRef(${ComponentName})
+    export default ${ComponentName}
   `;
 
   const component = format({

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Grid = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Grid = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Grid = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="3" y="3" width="7" height="7" />
       <rect x="14" y="3" width="7" height="7" />
@@ -23,18 +22,13 @@ const Grid = (props, ref) => {
       <rect x="3" y="14" width="7" height="7" />
     </svg>
   );
-};
+});
 
 Grid.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Grid.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Grid.displayName = 'Grid';
 
-export default forwardRef(Grid);
+export default Grid;

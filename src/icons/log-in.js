@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const LogIn = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const LogIn = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const LogIn = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
       <polyline points="10 17 15 12 10 7" />
       <line x1="15" y1="12" x2="3" y2="12" />
     </svg>
   );
-};
+});
 
 LogIn.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-LogIn.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 LogIn.displayName = 'LogIn';
 
-export default forwardRef(LogIn);
+export default LogIn;

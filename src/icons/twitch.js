@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Twitch = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Twitch = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Twitch = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7" />
     </svg>
   );
-};
+});
 
 Twitch.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Twitch.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Twitch.displayName = 'Twitch';
 
-export default forwardRef(Twitch);
+export default Twitch;

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FilePlus = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const FilePlus = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const FilePlus = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
       <polyline points="14 2 14 8 20 8" />
@@ -23,18 +22,13 @@ const FilePlus = (props, ref) => {
       <line x1="9" y1="15" x2="15" y2="15" />
     </svg>
   );
-};
+});
 
 FilePlus.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-FilePlus.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 FilePlus.displayName = 'FilePlus';
 
-export default forwardRef(FilePlus);
+export default FilePlus;

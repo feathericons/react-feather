@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Slash = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Slash = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Slash = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="12" r="10" />
       <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
     </svg>
   );
-};
+});
 
 Slash.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Slash.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Slash.displayName = 'Slash';
 
-export default forwardRef(Slash);
+export default Slash;

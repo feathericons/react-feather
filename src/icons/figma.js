@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Figma = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Figma = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Figma = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
       <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
@@ -24,18 +23,13 @@ const Figma = (props, ref) => {
       <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
     </svg>
   );
-};
+});
 
 Figma.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Figma.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Figma.displayName = 'Figma';
 
-export default forwardRef(Figma);
+export default Figma;

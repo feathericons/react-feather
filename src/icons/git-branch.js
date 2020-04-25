@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GitBranch = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const GitBranch = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const GitBranch = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="6" y1="3" x2="6" y2="15" />
       <circle cx="18" cy="6" r="3" />
@@ -23,18 +22,13 @@ const GitBranch = (props, ref) => {
       <path d="M18 9a9 9 0 0 1-9 9" />
     </svg>
   );
-};
+});
 
 GitBranch.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-GitBranch.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 GitBranch.displayName = 'GitBranch';
 
-export default forwardRef(GitBranch);
+export default GitBranch;

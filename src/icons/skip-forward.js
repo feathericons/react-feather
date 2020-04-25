@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const SkipForward = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const SkipForward = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const SkipForward = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polygon points="5 4 15 12 5 20 5 4" />
       <line x1="19" y1="5" x2="19" y2="19" />
     </svg>
   );
-};
+});
 
 SkipForward.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-SkipForward.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 SkipForward.displayName = 'SkipForward';
 
-export default forwardRef(SkipForward);
+export default SkipForward;

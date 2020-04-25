@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Rss = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Rss = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Rss = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M4 11a9 9 0 0 1 9 9" />
       <path d="M4 4a16 16 0 0 1 16 16" />
       <circle cx="5" cy="19" r="1" />
     </svg>
   );
-};
+});
 
 Rss.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Rss.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Rss.displayName = 'Rss';
 
-export default forwardRef(Rss);
+export default Rss;

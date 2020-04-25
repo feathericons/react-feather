@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PenTool = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const PenTool = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const PenTool = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M12 19l7-7 3 3-7 7-3-3z" />
       <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
@@ -23,18 +22,13 @@ const PenTool = (props, ref) => {
       <circle cx="11" cy="11" r="2" />
     </svg>
   );
-};
+});
 
 PenTool.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-PenTool.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 PenTool.displayName = 'PenTool';
 
-export default forwardRef(PenTool);
+export default PenTool;

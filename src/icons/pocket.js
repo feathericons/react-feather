@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Pocket = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Pocket = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Pocket = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M4 3h16a2 2 0 0 1 2 2v6a10 10 0 0 1-10 10A10 10 0 0 1 2 11V5a2 2 0 0 1 2-2z" />
       <polyline points="8 10 12 14 16 10" />
     </svg>
   );
-};
+});
 
 Pocket.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Pocket.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Pocket.displayName = 'Pocket';
 
-export default forwardRef(Pocket);
+export default Pocket;

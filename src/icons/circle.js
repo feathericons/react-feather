@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Circle = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Circle = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Circle = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="12" r="10" />
     </svg>
   );
-};
+});
 
 Circle.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Circle.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Circle.displayName = 'Circle';
 
-export default forwardRef(Circle);
+export default Circle;

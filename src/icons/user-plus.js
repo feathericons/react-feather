@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const UserPlus = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const UserPlus = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const UserPlus = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="8.5" cy="7" r="4" />
@@ -23,18 +22,13 @@ const UserPlus = (props, ref) => {
       <line x1="23" y1="11" x2="17" y2="11" />
     </svg>
   );
-};
+});
 
 UserPlus.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-UserPlus.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 UserPlus.displayName = 'UserPlus';
 
-export default forwardRef(UserPlus);
+export default UserPlus;

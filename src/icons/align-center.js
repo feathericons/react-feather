@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AlignCenter = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const AlignCenter = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const AlignCenter = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="18" y1="10" x2="6" y2="10" />
       <line x1="21" y1="6" x2="3" y2="6" />
@@ -23,18 +22,13 @@ const AlignCenter = (props, ref) => {
       <line x1="18" y1="18" x2="6" y2="18" />
     </svg>
   );
-};
+});
 
 AlignCenter.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-AlignCenter.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 AlignCenter.displayName = 'AlignCenter';
 
-export default forwardRef(AlignCenter);
+export default AlignCenter;

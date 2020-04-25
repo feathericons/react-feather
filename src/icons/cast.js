@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Cast = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Cast = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Cast = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6" />
       <line x1="2" y1="20" x2="2.01" y2="20" />
     </svg>
   );
-};
+});
 
 Cast.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Cast.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Cast.displayName = 'Cast';
 
-export default forwardRef(Cast);
+export default Cast;

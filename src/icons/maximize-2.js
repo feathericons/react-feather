@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Maximize2 = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Maximize2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Maximize2 = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polyline points="15 3 21 3 21 9" />
       <polyline points="9 21 3 21 3 15" />
@@ -23,18 +22,13 @@ const Maximize2 = (props, ref) => {
       <line x1="3" y1="21" x2="10" y2="14" />
     </svg>
   );
-};
+});
 
 Maximize2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Maximize2.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Maximize2.displayName = 'Maximize2';
 
-export default forwardRef(Maximize2);
+export default Maximize2;

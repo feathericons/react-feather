@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Navigation2 = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Navigation2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Navigation2 = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polygon points="12 2 19 21 12 17 5 21 12 2" />
     </svg>
   );
-};
+});
 
 Navigation2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Navigation2.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Navigation2.displayName = 'Navigation2';
 
-export default forwardRef(Navigation2);
+export default Navigation2;

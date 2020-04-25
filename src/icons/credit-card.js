@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CreditCard = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const CreditCard = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const CreditCard = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
       <line x1="1" y1="10" x2="23" y2="10" />
     </svg>
   );
-};
+});
 
 CreditCard.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CreditCard.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 CreditCard.displayName = 'CreditCard';
 
-export default forwardRef(CreditCard);
+export default CreditCard;

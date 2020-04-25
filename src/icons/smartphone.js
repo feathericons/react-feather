@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Smartphone = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Smartphone = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Smartphone = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
       <line x1="12" y1="18" x2="12.01" y2="18" />
     </svg>
   );
-};
+});
 
 Smartphone.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Smartphone.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Smartphone.displayName = 'Smartphone';
 
-export default forwardRef(Smartphone);
+export default Smartphone;

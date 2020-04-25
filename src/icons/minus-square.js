@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MinusSquare = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const MinusSquare = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const MinusSquare = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
       <line x1="8" y1="12" x2="16" y2="12" />
     </svg>
   );
-};
+});
 
 MinusSquare.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MinusSquare.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 MinusSquare.displayName = 'MinusSquare';
 
-export default forwardRef(MinusSquare);
+export default MinusSquare;

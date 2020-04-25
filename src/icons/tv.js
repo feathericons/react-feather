@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Tv = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Tv = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Tv = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
       <polyline points="17 2 12 7 7 2" />
     </svg>
   );
-};
+});
 
 Tv.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Tv.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Tv.displayName = 'Tv';
 
-export default forwardRef(Tv);
+export default Tv;

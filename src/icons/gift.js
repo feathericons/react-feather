@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Gift = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Gift = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Gift = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polyline points="20 12 20 22 4 22 4 12" />
       <rect x="2" y="7" width="20" height="5" />
@@ -24,18 +23,13 @@ const Gift = (props, ref) => {
       <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" />
     </svg>
   );
-};
+});
 
 Gift.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Gift.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Gift.displayName = 'Gift';
 
-export default forwardRef(Gift);
+export default Gift;

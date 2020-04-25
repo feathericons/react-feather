@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Volume1 = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Volume1 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Volume1 = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
       <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
     </svg>
   );
-};
+});
 
 Volume1.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Volume1.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Volume1.displayName = 'Volume1';
 
-export default forwardRef(Volume1);
+export default Volume1;

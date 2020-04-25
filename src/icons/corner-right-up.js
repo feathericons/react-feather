@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CornerRightUp = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const CornerRightUp = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const CornerRightUp = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polyline points="10 9 15 4 20 9" />
       <path d="M4 20h7a4 4 0 0 0 4-4V4" />
     </svg>
   );
-};
+});
 
 CornerRightUp.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CornerRightUp.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 CornerRightUp.displayName = 'CornerRightUp';
 
-export default forwardRef(CornerRightUp);
+export default CornerRightUp;

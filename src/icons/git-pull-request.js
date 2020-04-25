@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GitPullRequest = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const GitPullRequest = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const GitPullRequest = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="18" cy="18" r="3" />
       <circle cx="6" cy="6" r="3" />
@@ -23,18 +22,13 @@ const GitPullRequest = (props, ref) => {
       <line x1="6" y1="9" x2="6" y2="21" />
     </svg>
   );
-};
+});
 
 GitPullRequest.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-GitPullRequest.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 GitPullRequest.displayName = 'GitPullRequest';
 
-export default forwardRef(GitPullRequest);
+export default GitPullRequest;

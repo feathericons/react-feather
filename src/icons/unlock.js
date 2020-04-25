@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Unlock = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Unlock = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const Unlock = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
       <path d="M7 11V7a5 5 0 0 1 9.9-1" />
     </svg>
   );
-};
+});
 
 Unlock.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Unlock.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Unlock.displayName = 'Unlock';
 
-export default forwardRef(Unlock);
+export default Unlock;

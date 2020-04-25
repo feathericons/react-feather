@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Chrome = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Chrome = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Chrome = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="12" r="10" />
       <circle cx="12" cy="12" r="4" />
@@ -24,18 +23,13 @@ const Chrome = (props, ref) => {
       <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
     </svg>
   );
-};
+});
 
 Chrome.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Chrome.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Chrome.displayName = 'Chrome';
 
-export default forwardRef(Chrome);
+export default Chrome;

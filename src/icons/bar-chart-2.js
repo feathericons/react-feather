@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const BarChart2 = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const BarChart2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const BarChart2 = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="18" y1="20" x2="18" y2="10" />
       <line x1="12" y1="20" x2="12" y2="4" />
       <line x1="6" y1="20" x2="6" y2="14" />
     </svg>
   );
-};
+});
 
 BarChart2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-BarChart2.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 BarChart2.displayName = 'BarChart2';
 
-export default forwardRef(BarChart2);
+export default BarChart2;

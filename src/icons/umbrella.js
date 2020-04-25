@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Umbrella = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Umbrella = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Umbrella = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7" />
     </svg>
   );
-};
+});
 
 Umbrella.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Umbrella.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Umbrella.displayName = 'Umbrella';
 
-export default forwardRef(Umbrella);
+export default Umbrella;

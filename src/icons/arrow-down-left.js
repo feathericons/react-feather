@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowDownLeft = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const ArrowDownLeft = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const ArrowDownLeft = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="17" y1="7" x2="7" y2="17" />
       <polyline points="17 17 7 17 7 7" />
     </svg>
   );
-};
+});
 
 ArrowDownLeft.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ArrowDownLeft.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 ArrowDownLeft.displayName = 'ArrowDownLeft';
 
-export default forwardRef(ArrowDownLeft);
+export default ArrowDownLeft;

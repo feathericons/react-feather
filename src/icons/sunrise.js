@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Sunrise = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Sunrise = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Sunrise = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M17 18a5 5 0 0 0-10 0" />
       <line x1="12" y1="2" x2="12" y2="9" />
@@ -27,18 +26,13 @@ const Sunrise = (props, ref) => {
       <polyline points="8 6 12 2 16 6" />
     </svg>
   );
-};
+});
 
 Sunrise.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Sunrise.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Sunrise.displayName = 'Sunrise';
 
-export default forwardRef(Sunrise);
+export default Sunrise;

@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const GitCommit = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const GitCommit = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const GitCommit = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="12" r="4" />
       <line x1="1.05" y1="12" x2="7" y2="12" />
       <line x1="17.01" y1="12" x2="22.96" y2="12" />
     </svg>
   );
-};
+});
 
 GitCommit.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-GitCommit.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 GitCommit.displayName = 'GitCommit';
 
-export default forwardRef(GitCommit);
+export default GitCommit;

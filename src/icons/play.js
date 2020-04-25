@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Play = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Play = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const Play = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polygon points="5 3 19 12 5 21 5 3" />
     </svg>
   );
-};
+});
 
 Play.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Play.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Play.displayName = 'Play';
 
-export default forwardRef(Play);
+export default Play;

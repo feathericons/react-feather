@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MessageSquare = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const MessageSquare = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const MessageSquare = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
     </svg>
   );
-};
+});
 
 MessageSquare.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MessageSquare.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 MessageSquare.displayName = 'MessageSquare';
 
-export default forwardRef(MessageSquare);
+export default MessageSquare;

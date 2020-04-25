@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CloudDrizzle = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const CloudDrizzle = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const CloudDrizzle = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="8" y1="19" x2="8" y2="21" />
       <line x1="8" y1="13" x2="8" y2="15" />
@@ -26,18 +25,13 @@ const CloudDrizzle = (props, ref) => {
       <path d="M20 16.58A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25" />
     </svg>
   );
-};
+});
 
 CloudDrizzle.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-CloudDrizzle.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 CloudDrizzle.displayName = 'CloudDrizzle';
 
-export default forwardRef(CloudDrizzle);
+export default CloudDrizzle;

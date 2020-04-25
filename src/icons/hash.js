@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Hash = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Hash = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Hash = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="4" y1="9" x2="20" y2="9" />
       <line x1="4" y1="15" x2="20" y2="15" />
@@ -23,18 +22,13 @@ const Hash = (props, ref) => {
       <line x1="16" y1="3" x2="14" y2="21" />
     </svg>
   );
-};
+});
 
 Hash.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Hash.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Hash.displayName = 'Hash';
 
-export default forwardRef(Hash);
+export default Hash;

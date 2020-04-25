@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Cpu = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Cpu = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Cpu = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
       <rect x="9" y="9" width="6" height="6" />
@@ -29,18 +28,13 @@ const Cpu = (props, ref) => {
       <line x1="1" y1="14" x2="4" y2="14" />
     </svg>
   );
-};
+});
 
 Cpu.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Cpu.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Cpu.displayName = 'Cpu';
 
-export default forwardRef(Cpu);
+export default Cpu;

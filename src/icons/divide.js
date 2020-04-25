@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Divide = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Divide = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,25 +14,20 @@ const Divide = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="6" r="2" />
       <line x1="5" y1="12" x2="19" y2="12" />
       <circle cx="12" cy="18" r="2" />
     </svg>
   );
-};
+});
 
 Divide.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Divide.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Divide.displayName = 'Divide';
 
-export default forwardRef(Divide);
+export default Divide;

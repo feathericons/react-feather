@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Wifi = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Wifi = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Wifi = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M5 12.55a11 11 0 0 1 14.08 0" />
       <path d="M1.42 9a16 16 0 0 1 21.16 0" />
@@ -23,18 +22,13 @@ const Wifi = (props, ref) => {
       <line x1="12" y1="20" x2="12.01" y2="20" />
     </svg>
   );
-};
+});
 
 Wifi.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Wifi.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Wifi.displayName = 'Wifi';
 
-export default forwardRef(Wifi);
+export default Wifi;

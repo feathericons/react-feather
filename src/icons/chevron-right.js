@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ChevronRight = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const ChevronRight = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,23 +14,18 @@ const ChevronRight = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <polyline points="9 18 15 12 9 6" />
     </svg>
   );
-};
+});
 
 ChevronRight.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-ChevronRight.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 ChevronRight.displayName = 'ChevronRight';
 
-export default forwardRef(ChevronRight);
+export default ChevronRight;

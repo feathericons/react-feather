@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PieChart = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const PieChart = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,24 +14,19 @@ const PieChart = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
       <path d="M22 12A10 10 0 0 0 12 2v10z" />
     </svg>
   );
-};
+});
 
 PieChart.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-PieChart.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 PieChart.displayName = 'PieChart';
 
-export default forwardRef(PieChart);
+export default PieChart;

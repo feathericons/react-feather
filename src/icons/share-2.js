@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Share2 = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Share2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Share2 = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="18" cy="5" r="3" />
       <circle cx="6" cy="12" r="3" />
@@ -24,18 +23,13 @@ const Share2 = (props, ref) => {
       <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
     </svg>
   );
-};
+});
 
 Share2.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Share2.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Share2.displayName = 'Share2';
 
-export default forwardRef(Share2);
+export default Share2;

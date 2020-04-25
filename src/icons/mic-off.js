@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MicOff = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const MicOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const MicOff = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <line x1="1" y1="1" x2="23" y2="23" />
       <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6" />
@@ -24,18 +23,13 @@ const MicOff = (props, ref) => {
       <line x1="8" y1="23" x2="16" y2="23" />
     </svg>
   );
-};
+});
 
 MicOff.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-MicOff.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 MicOff.displayName = 'MicOff';
 
-export default forwardRef(MicOff);
+export default MicOff;

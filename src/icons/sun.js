@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Sun = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Sun = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Sun = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="12" r="5" />
       <line x1="12" y1="1" x2="12" y2="3" />
@@ -28,18 +27,13 @@ const Sun = (props, ref) => {
       <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
     </svg>
   );
-};
+});
 
 Sun.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Sun.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Sun.displayName = 'Sun';
 
-export default forwardRef(Sun);
+export default Sun;

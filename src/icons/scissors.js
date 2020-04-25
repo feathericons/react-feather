@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Scissors = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Scissors = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Scissors = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="6" cy="6" r="3" />
       <circle cx="6" cy="18" r="3" />
@@ -24,18 +23,13 @@ const Scissors = (props, ref) => {
       <line x1="8.12" y1="8.12" x2="12" y2="12" />
     </svg>
   );
-};
+});
 
 Scissors.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Scissors.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Scissors.displayName = 'Scissors';
 
-export default forwardRef(Scissors);
+export default Scissors;

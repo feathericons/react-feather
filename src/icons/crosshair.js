@@ -1,8 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Crosshair = (props, ref) => {
-  const { color, size, ...otherProps } = props;
+const Crosshair = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
@@ -15,7 +14,7 @@ const Crosshair = (props, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      {...otherProps}
+      {...rest}
     >
       <circle cx="12" cy="12" r="10" />
       <line x1="22" y1="12" x2="18" y2="12" />
@@ -24,18 +23,13 @@ const Crosshair = (props, ref) => {
       <line x1="12" y1="22" x2="12" y2="18" />
     </svg>
   );
-};
+});
 
 Crosshair.propTypes = {
   color: PropTypes.string,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-Crosshair.defaultProps = {
-  color: 'currentColor',
-  size: '24',
-};
-
 Crosshair.displayName = 'Crosshair';
 
-export default forwardRef(Crosshair);
+export default Crosshair;
