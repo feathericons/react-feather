@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Smartphone = (props) => {
+const Smartphone = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -32,4 +33,4 @@ Smartphone.defaultProps = {
   size: '24',
 };
 
-export default Smartphone;
+export default forwardRef(Smartphone);

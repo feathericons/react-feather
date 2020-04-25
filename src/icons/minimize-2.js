@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Minimize2 = (props) => {
+const Minimize2 = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -34,4 +35,4 @@ Minimize2.defaultProps = {
   size: '24',
 };
 
-export default Minimize2;
+export default forwardRef(Minimize2);

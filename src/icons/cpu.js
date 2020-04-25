@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Cpu = (props) => {
+const Cpu = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -40,4 +41,4 @@ Cpu.defaultProps = {
   size: '24',
 };
 
-export default Cpu;
+export default forwardRef(Cpu);

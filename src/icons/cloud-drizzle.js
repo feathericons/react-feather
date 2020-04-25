@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CloudDrizzle = (props) => {
+const CloudDrizzle = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -37,4 +38,4 @@ CloudDrizzle.defaultProps = {
   size: '24',
 };
 
-export default CloudDrizzle;
+export default forwardRef(CloudDrizzle);

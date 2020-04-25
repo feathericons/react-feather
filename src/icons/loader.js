@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Loader = (props) => {
+const Loader = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -38,4 +39,4 @@ Loader.defaultProps = {
   size: '24',
 };
 
-export default Loader;
+export default forwardRef(Loader);

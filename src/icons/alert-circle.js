@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AlertCircle = (props) => {
+const AlertCircle = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -33,4 +34,4 @@ AlertCircle.defaultProps = {
   size: '24',
 };
 
-export default AlertCircle;
+export default forwardRef(AlertCircle);

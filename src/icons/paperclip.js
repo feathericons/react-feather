@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Paperclip = (props) => {
+const Paperclip = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -31,4 +32,4 @@ Paperclip.defaultProps = {
   size: '24',
 };
 
-export default Paperclip;
+export default forwardRef(Paperclip);

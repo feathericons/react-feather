@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AlignLeft = (props) => {
+const AlignLeft = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -34,4 +35,4 @@ AlignLeft.defaultProps = {
   size: '24',
 };
 
-export default AlignLeft;
+export default forwardRef(AlignLeft);

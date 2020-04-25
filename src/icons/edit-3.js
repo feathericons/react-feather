@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Edit3 = (props) => {
+const Edit3 = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -32,4 +33,4 @@ Edit3.defaultProps = {
   size: '24',
 };
 
-export default Edit3;
+export default forwardRef(Edit3);

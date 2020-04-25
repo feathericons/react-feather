@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const FileMinus = (props) => {
+const FileMinus = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -33,4 +34,4 @@ FileMinus.defaultProps = {
   size: '24',
 };
 
-export default FileMinus;
+export default forwardRef(FileMinus);

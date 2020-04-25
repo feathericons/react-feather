@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Grid = (props) => {
+const Grid = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -34,4 +35,4 @@ Grid.defaultProps = {
   size: '24',
 };
 
-export default Grid;
+export default forwardRef(Grid);

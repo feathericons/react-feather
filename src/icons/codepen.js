@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Codepen = (props) => {
+const Codepen = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -35,4 +36,4 @@ Codepen.defaultProps = {
   size: '24',
 };
 
-export default Codepen;
+export default forwardRef(Codepen);

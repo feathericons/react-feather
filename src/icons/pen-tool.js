@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const PenTool = (props) => {
+const PenTool = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -34,4 +35,4 @@ PenTool.defaultProps = {
   size: '24',
 };
 
-export default PenTool;
+export default forwardRef(PenTool);

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Upload = (props) => {
+const Upload = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -33,4 +34,4 @@ Upload.defaultProps = {
   size: '24',
 };
 
-export default Upload;
+export default forwardRef(Upload);

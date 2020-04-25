@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CornerRightUp = (props) => {
+const CornerRightUp = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -32,4 +33,4 @@ CornerRightUp.defaultProps = {
   size: '24',
 };
 
-export default CornerRightUp;
+export default forwardRef(CornerRightUp);

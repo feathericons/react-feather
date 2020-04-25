@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ArrowUpRight = (props) => {
+const ArrowUpRight = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -32,4 +33,4 @@ ArrowUpRight.defaultProps = {
   size: '24',
 };
 
-export default ArrowUpRight;
+export default forwardRef(ArrowUpRight);

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Instagram = (props) => {
+const Instagram = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -33,4 +34,4 @@ Instagram.defaultProps = {
   size: '24',
 };
 
-export default Instagram;
+export default forwardRef(Instagram);

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const HardDrive = (props) => {
+const HardDrive = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -34,4 +35,4 @@ HardDrive.defaultProps = {
   size: '24',
 };
 
-export default HardDrive;
+export default forwardRef(HardDrive);

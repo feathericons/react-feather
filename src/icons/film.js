@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Film = (props) => {
+const Film = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -38,4 +39,4 @@ Film.defaultProps = {
   size: '24',
 };
 
-export default Film;
+export default forwardRef(Film);

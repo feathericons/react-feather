@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Sun = (props) => {
+const Sun = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -39,4 +40,4 @@ Sun.defaultProps = {
   size: '24',
 };
 
-export default Sun;
+export default forwardRef(Sun);

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CloudSnow = (props) => {
+const CloudSnow = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -37,4 +38,4 @@ CloudSnow.defaultProps = {
   size: '24',
 };
 
-export default CloudSnow;
+export default forwardRef(CloudSnow);

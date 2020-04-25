@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const Shuffle = (props) => {
+const Shuffle = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -35,4 +36,4 @@ Shuffle.defaultProps = {
   size: '24',
 };
 
-export default Shuffle;
+export default forwardRef(Shuffle);

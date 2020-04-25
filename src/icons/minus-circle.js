@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const MinusCircle = (props) => {
+const MinusCircle = (props, ref) => {
   const { color, size, ...otherProps } = props;
   return (
     <svg
+      ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
@@ -32,4 +33,4 @@ MinusCircle.defaultProps = {
   size: '24',
 };
 
-export default MinusCircle;
+export default forwardRef(MinusCircle);
