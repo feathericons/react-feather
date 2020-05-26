@@ -59,6 +59,7 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "svgs": "^4.1.1"
   }
 }
