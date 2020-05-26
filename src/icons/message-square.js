@@ -1,9 +1,12 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Path,
+} from 'svgs';
 
 const MessageSquare = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,8 +19,8 @@ const MessageSquare = forwardRef(({ color = 'currentColor', size = 24, ...rest }
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-    </svg>
+      <Path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </Svg>
   );
 });
 

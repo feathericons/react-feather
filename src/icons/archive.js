@@ -1,9 +1,14 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Line,
+  Polyline,
+  Rect,
+} from 'svgs';
 
 const Archive = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +21,10 @@ const Archive = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeLinejoin="round"
       {...rest}
     >
-      <polyline points="21 8 21 21 3 21 3 8" />
-      <rect x="1" y="3" width="22" height="5" />
-      <line x1="10" y1="12" x2="14" y2="12" />
-    </svg>
+      <Polyline points="21 8 21 21 3 21 3 8" />
+      <Rect x="1" y="3" width="22" height="5" />
+      <Line x1="10" y1="12" x2="14" y2="12" />
+    </Svg>
   );
 });
 

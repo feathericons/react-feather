@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Line,
+  Rect,
+} from 'svgs';
 
 const Tablet = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,9 +20,9 @@ const Tablet = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeLinejoin="round"
       {...rest}
     >
-      <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
-      <line x1="12" y1="18" x2="12.01" y2="18" />
-    </svg>
+      <Rect x="4" y="2" width="16" height="20" rx="2" ry="2" />
+      <Line x1="12" y1="18" x2="12.01" y2="18" />
+    </Svg>
   );
 });
 

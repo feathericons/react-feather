@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Path,
+  Polygon,
+} from 'svgs';
 
 const Volume1 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,9 +20,9 @@ const Volume1 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeLinejoin="round"
       {...rest}
     >
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
-      <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
-    </svg>
+      <Polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+      <Path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+    </Svg>
   );
 });
 

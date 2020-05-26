@@ -1,9 +1,12 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Polygon,
+} from 'svgs';
 
 const Navigation2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,8 +19,8 @@ const Navigation2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeLinejoin="round"
       {...rest}
     >
-      <polygon points="12 2 19 21 12 17 5 21 12 2" />
-    </svg>
+      <Polygon points="12 2 19 21 12 17 5 21 12 2" />
+    </Svg>
   );
 });
 

@@ -1,9 +1,12 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Polyline,
+} from 'svgs';
 
 const ChevronUp = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,8 +19,8 @@ const ChevronUp = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeLinejoin="round"
       {...rest}
     >
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
+      <Polyline points="18 15 12 9 6 15" />
+    </Svg>
   );
 });
 

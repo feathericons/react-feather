@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Line,
+  Path,
+} from 'svgs';
 
 const VideoOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,9 +20,9 @@ const VideoOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10" />
-      <line x1="1" y1="1" x2="23" y2="23" />
-    </svg>
+      <Path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10" />
+      <Line x1="1" y1="1" x2="23" y2="23" />
+    </Svg>
   );
 });
 

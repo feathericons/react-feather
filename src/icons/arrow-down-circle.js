@@ -1,9 +1,14 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Line,
+  Polyline,
+} from 'svgs';
 
 const ArrowDownCircle = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +21,10 @@ const ArrowDownCircle = forwardRef(({ color = 'currentColor', size = 24, ...rest
       strokeLinejoin="round"
       {...rest}
     >
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="8 12 12 16 16 12" />
-      <line x1="12" y1="8" x2="12" y2="16" />
-    </svg>
+      <Circle cx="12" cy="12" r="10" />
+      <Polyline points="8 12 12 16 16 12" />
+      <Line x1="12" y1="8" x2="12" y2="16" />
+    </Svg>
   );
 });
 

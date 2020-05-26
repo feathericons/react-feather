@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Line,
+} from 'svgs';
 
 const GitCommit = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +20,10 @@ const GitCommit = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeLinejoin="round"
       {...rest}
     >
-      <circle cx="12" cy="12" r="4" />
-      <line x1="1.05" y1="12" x2="7" y2="12" />
-      <line x1="17.01" y1="12" x2="22.96" y2="12" />
-    </svg>
+      <Circle cx="12" cy="12" r="4" />
+      <Line x1="1.05" y1="12" x2="7" y2="12" />
+      <Line x1="17.01" y1="12" x2="22.96" y2="12" />
+    </Svg>
   );
 });
 

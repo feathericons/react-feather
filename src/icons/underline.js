@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Line,
+  Path,
+} from 'svgs';
 
 const Underline = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,9 +20,9 @@ const Underline = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeLinejoin="round"
       {...rest}
     >
-      <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3" />
-      <line x1="4" y1="21" x2="20" y2="21" />
-    </svg>
+      <Path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3" />
+      <Line x1="4" y1="21" x2="20" y2="21" />
+    </Svg>
   );
 });
 

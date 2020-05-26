@@ -1,9 +1,12 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Rect,
+} from 'svgs';
 
 const Grid = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,11 +19,11 @@ const Grid = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeLinejoin="round"
       {...rest}
     >
-      <rect x="3" y="3" width="7" height="7" />
-      <rect x="14" y="3" width="7" height="7" />
-      <rect x="14" y="14" width="7" height="7" />
-      <rect x="3" y="14" width="7" height="7" />
-    </svg>
+      <Rect x="3" y="3" width="7" height="7" />
+      <Rect x="14" y="3" width="7" height="7" />
+      <Rect x="14" y="14" width="7" height="7" />
+      <Rect x="3" y="14" width="7" height="7" />
+    </Svg>
   );
 });
 

@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Line,
+  Polygon,
+} from 'svgs';
 
 const SkipForward = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,9 +20,9 @@ const SkipForward = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeLinejoin="round"
       {...rest}
     >
-      <polygon points="5 4 15 12 5 20 5 4" />
-      <line x1="19" y1="5" x2="19" y2="19" />
-    </svg>
+      <Polygon points="5 4 15 12 5 20 5 4" />
+      <Line x1="19" y1="5" x2="19" y2="19" />
+    </Svg>
   );
 });
 
