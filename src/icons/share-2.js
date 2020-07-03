@@ -14,6 +14,7 @@ const Share2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-share-2"
       {...rest}
     >
       <circle cx="18" cy="5" r="3" />

@@ -14,6 +14,7 @@ const ZapOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-zap-off"
       {...rest}
     >
       <polyline points="12.41 6.75 13 2 10.57 4.92" />

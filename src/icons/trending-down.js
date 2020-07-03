@@ -14,6 +14,7 @@ const TrendingDown = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-trending-down"
       {...rest}
     >
       <polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />

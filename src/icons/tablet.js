@@ -14,6 +14,7 @@ const Tablet = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-tablet"
       {...rest}
     >
       <rect x="4" y="2" width="16" height="20" rx="2" ry="2" />

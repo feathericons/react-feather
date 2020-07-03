@@ -14,6 +14,7 @@ const GitBranch = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-git-branch"
       {...rest}
     >
       <line x1="6" y1="3" x2="6" y2="15" />

@@ -14,6 +14,7 @@ const Frown = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-frown"
       {...rest}
     >
       <circle cx="12" cy="12" r="10" />

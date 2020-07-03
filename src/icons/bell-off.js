@@ -14,6 +14,7 @@ const BellOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-bell-off"
       {...rest}
     >
       <path d="M13.73 21a2 2 0 0 1-3.46 0" />

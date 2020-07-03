@@ -14,6 +14,7 @@ const Cpu = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-cpu"
       {...rest}
     >
       <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />

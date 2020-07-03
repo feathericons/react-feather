@@ -14,6 +14,7 @@ const Play = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-play"
       {...rest}
     >
       <polygon points="5 3 19 12 5 21 5 3" />

@@ -14,6 +14,7 @@ const Menu = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-menu"
       {...rest}
     >
       <line x1="3" y1="12" x2="21" y2="12" />

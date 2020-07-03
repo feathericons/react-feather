@@ -14,6 +14,7 @@ const Database = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-database"
       {...rest}
     >
       <ellipse cx="12" cy="5" rx="9" ry="3" />

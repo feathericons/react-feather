@@ -14,6 +14,7 @@ const Instagram = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-instagram"
       {...rest}
     >
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />

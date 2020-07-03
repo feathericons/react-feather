@@ -14,6 +14,7 @@ const Rewind = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-rewind"
       {...rest}
     >
       <polygon points="11 19 2 12 11 5 11 19" />

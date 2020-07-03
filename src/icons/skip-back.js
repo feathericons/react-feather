@@ -14,6 +14,7 @@ const SkipBack = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-skip-back"
       {...rest}
     >
       <polygon points="19 20 9 12 19 4 19 20" />

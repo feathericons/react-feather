@@ -14,6 +14,7 @@ const RefreshCw = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-refresh-cw"
       {...rest}
     >
       <polyline points="23 4 23 10 17 10" />

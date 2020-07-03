@@ -14,6 +14,7 @@ const Monitor = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-monitor"
       {...rest}
     >
       <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />

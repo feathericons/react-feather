@@ -14,6 +14,7 @@ const Power = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-power"
       {...rest}
     >
       <path d="M18.36 6.64a9 9 0 1 1-12.73 0" />

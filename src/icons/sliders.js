@@ -14,6 +14,7 @@ const Sliders = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-sliders"
       {...rest}
     >
       <line x1="4" y1="21" x2="4" y2="14" />

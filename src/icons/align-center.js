@@ -14,6 +14,7 @@ const AlignCenter = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-align-center"
       {...rest}
     >
       <line x1="18" y1="10" x2="6" y2="10" />

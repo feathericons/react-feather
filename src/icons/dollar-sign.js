@@ -14,6 +14,7 @@ const DollarSign = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-dollar-sign"
       {...rest}
     >
       <line x1="12" y1="1" x2="12" y2="23" />

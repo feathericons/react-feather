@@ -14,6 +14,7 @@ const PieChart = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-pie-chart"
       {...rest}
     >
       <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />

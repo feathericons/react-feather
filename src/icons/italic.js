@@ -14,6 +14,7 @@ const Italic = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-italic"
       {...rest}
     >
       <line x1="19" y1="4" x2="10" y2="4" />

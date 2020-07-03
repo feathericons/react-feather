@@ -14,6 +14,7 @@ const Volume2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-volume-2"
       {...rest}
     >
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />

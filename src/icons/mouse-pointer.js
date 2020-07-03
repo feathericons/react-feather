@@ -14,6 +14,7 @@ const MousePointer = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-mouse-pointer"
       {...rest}
     >
       <path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />

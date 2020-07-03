@@ -14,6 +14,7 @@ const Server = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-server"
       {...rest}
     >
       <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />

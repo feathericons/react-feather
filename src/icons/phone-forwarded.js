@@ -14,6 +14,7 @@ const PhoneForwarded = forwardRef(({ color = 'currentColor', size = 24, ...rest 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-phone-forwarded"
       {...rest}
     >
       <polyline points="19 1 23 5 19 9" />

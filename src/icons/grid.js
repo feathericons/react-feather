@@ -14,6 +14,7 @@ const Grid = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-grid"
       {...rest}
     >
       <rect x="3" y="3" width="7" height="7" />

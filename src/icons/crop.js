@@ -14,6 +14,7 @@ const Crop = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-crop"
       {...rest}
     >
       <path d="M6.13 1L6 16a2 2 0 0 0 2 2h15" />

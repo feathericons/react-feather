@@ -14,6 +14,7 @@ const Inbox = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-inbox"
       {...rest}
     >
       <polyline points="22 12 16 12 14 15 10 15 8 12 2 12" />

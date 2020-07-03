@@ -14,6 +14,7 @@ const Mic = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-mic"
       {...rest}
     >
       <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" />

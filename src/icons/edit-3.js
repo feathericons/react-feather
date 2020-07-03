@@ -14,6 +14,7 @@ const Edit3 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-edit-3"
       {...rest}
     >
       <path d="M12 20h9" />

@@ -14,6 +14,7 @@ const Music = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-music"
       {...rest}
     >
       <path d="M9 18V5l12-2v13" />

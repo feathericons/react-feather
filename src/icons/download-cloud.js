@@ -14,6 +14,7 @@ const DownloadCloud = forwardRef(({ color = 'currentColor', size = 24, ...rest }
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-download-cloud"
       {...rest}
     >
       <polyline points="8 17 12 21 16 17" />

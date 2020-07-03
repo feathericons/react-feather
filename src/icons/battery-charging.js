@@ -14,6 +14,7 @@ const BatteryCharging = forwardRef(({ color = 'currentColor', size = 24, ...rest
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-battery-charging"
       {...rest}
     >
       <path d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3.19" />

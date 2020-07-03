@@ -14,6 +14,7 @@ const Send = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-send"
       {...rest}
     >
       <line x1="22" y1="2" x2="11" y2="13" />

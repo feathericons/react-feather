@@ -14,6 +14,7 @@ const Maximize2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-maximize-2"
       {...rest}
     >
       <polyline points="15 3 21 3 21 9" />

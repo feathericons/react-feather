@@ -14,6 +14,7 @@ const Crosshair = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-crosshair"
       {...rest}
     >
       <circle cx="12" cy="12" r="10" />

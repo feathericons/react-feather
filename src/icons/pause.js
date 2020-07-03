@@ -14,6 +14,7 @@ const Pause = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-pause"
       {...rest}
     >
       <rect x="6" y="4" width="4" height="16" />

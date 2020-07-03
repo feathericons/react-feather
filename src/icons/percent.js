@@ -14,6 +14,7 @@ const Percent = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-percent"
       {...rest}
     >
       <line x1="19" y1="5" x2="5" y2="19" />

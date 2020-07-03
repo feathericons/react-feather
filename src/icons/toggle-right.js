@@ -14,6 +14,7 @@ const ToggleRight = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-toggle-right"
       {...rest}
     >
       <rect x="1" y="5" width="22" height="14" rx="7" ry="7" />

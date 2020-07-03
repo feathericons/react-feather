@@ -14,6 +14,7 @@ const Wifi = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-wifi"
       {...rest}
     >
       <path d="M5 12.55a11 11 0 0 1 14.08 0" />

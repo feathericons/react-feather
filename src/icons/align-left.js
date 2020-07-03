@@ -14,6 +14,7 @@ const AlignLeft = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-align-left"
       {...rest}
     >
       <line x1="17" y1="10" x2="3" y2="10" />

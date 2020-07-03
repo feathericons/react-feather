@@ -14,6 +14,7 @@ const GitMerge = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-git-merge"
       {...rest}
     >
       <circle cx="18" cy="18" r="3" />

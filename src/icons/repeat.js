@@ -14,6 +14,7 @@ const Repeat = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-repeat"
       {...rest}
     >
       <polyline points="17 1 21 5 17 9" />

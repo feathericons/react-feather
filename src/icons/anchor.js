@@ -14,6 +14,7 @@ const Anchor = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-anchor"
       {...rest}
     >
       <circle cx="12" cy="5" r="3" />

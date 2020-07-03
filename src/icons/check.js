@@ -14,6 +14,7 @@ const Check = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-check"
       {...rest}
     >
       <polyline points="20 6 9 17 4 12" />

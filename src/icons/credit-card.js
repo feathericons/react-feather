@@ -14,6 +14,7 @@ const CreditCard = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-credit-card"
       {...rest}
     >
       <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />

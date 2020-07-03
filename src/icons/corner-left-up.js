@@ -14,6 +14,7 @@ const CornerLeftUp = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-corner-left-up"
       {...rest}
     >
       <polyline points="14 9 9 4 4 9" />

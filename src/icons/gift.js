@@ -14,6 +14,7 @@ const Gift = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-gift"
       {...rest}
     >
       <polyline points="20 12 20 22 4 22 4 12" />

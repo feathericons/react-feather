@@ -14,6 +14,7 @@ const Book = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-book"
       {...rest}
     >
       <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />

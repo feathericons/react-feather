@@ -14,6 +14,7 @@ const Layers = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-layers"
       {...rest}
     >
       <polygon points="12 2 2 7 12 12 22 7 12 2" />
