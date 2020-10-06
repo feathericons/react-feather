@@ -3,17 +3,16 @@
   "version": "2.0.8",
   "description": "React component for Feather icons",
   "main": "build/index.js",
-  "module": "dist/index.js",
+  "module": "src/index.js",
   "sideEffects": false,
-  "typings": "dist/index.d.ts",
+  "typings": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "rm -rf src/icons && node bin/build.js",
     "build:bundle": "rm -rf build && rollup --config rollup.config.js",
     "build:es": "rm -rf dist && babel src --out-dir dist --copy-files",
     "build": "concurrently \"npm:build:*\"",
-    "preinstall": "npm install --ignore-scripts",
-    "postinstall": "npm run build && rm -rf node_modules"
+    "postinstall": "yarn build"
   },
   "files": [
     "dist",
