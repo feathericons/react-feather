@@ -1,3 +1,4 @@
 node_modules
-dist
-build
+# temporarily as it's not using npm
+# dist
+# build

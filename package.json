@@ -3,9 +3,9 @@
   "version": "2.0.11",
   "description": "React component for Feather icons",
   "main": "src/index.js",
-  "module": "src/index.js",
+  "module": "dist/index.js",
   "sideEffects": false,
-  "typings": "src/index.d.ts",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "rm -rf src/icons && node bin/build.js",
