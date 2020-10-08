@@ -1,9 +1,14 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Polygon,
+  Rect,
+} from 'svgs';
 
 const Truck = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,11 +21,11 @@ const Truck = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeLinejoin="round"
       {...rest}
     >
-      <rect x="1" y="3" width="15" height="13" />
-      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
-      <circle cx="5.5" cy="18.5" r="2.5" />
-      <circle cx="18.5" cy="18.5" r="2.5" />
-    </svg>
+      <Rect x="1" y="3" width="15" height="13" />
+      <Polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+      <Circle cx="5.5" cy="18.5" r="2.5" />
+      <Circle cx="18.5" cy="18.5" r="2.5" />
+    </Svg>
   );
 });
 

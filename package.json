@@ -1,8 +1,8 @@
 {
   "name": "react-feather",
-  "version": "2.0.8",
+  "version": "2.0.12",
   "description": "React component for Feather icons",
-  "main": "build/index.js",
+  "main": "src/index.js",
   "module": "dist/index.js",
   "sideEffects": false,
   "typings": "dist/index.d.ts",
@@ -59,6 +59,7 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "svgs": "^4.1.1"
   }
 }

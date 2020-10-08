@@ -1,9 +1,14 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Line,
+  Path,
+} from 'svgs';
 
 const GitBranch = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,11 +21,11 @@ const GitBranch = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeLinejoin="round"
       {...rest}
     >
-      <line x1="6" y1="3" x2="6" y2="15" />
-      <circle cx="18" cy="6" r="3" />
-      <circle cx="6" cy="18" r="3" />
-      <path d="M18 9a9 9 0 0 1-9 9" />
-    </svg>
+      <Line x1="6" y1="3" x2="6" y2="15" />
+      <Circle cx="18" cy="6" r="3" />
+      <Circle cx="6" cy="18" r="3" />
+      <Path d="M18 9a9 9 0 0 1-9 9" />
+    </Svg>
   );
 });
 

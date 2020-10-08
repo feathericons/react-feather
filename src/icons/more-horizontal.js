@@ -1,9 +1,12 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+} from 'svgs';
 
 const MoreHorizontal = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +19,10 @@ const MoreHorizontal = forwardRef(({ color = 'currentColor', size = 24, ...rest 
       strokeLinejoin="round"
       {...rest}
     >
-      <circle cx="12" cy="12" r="1" />
-      <circle cx="19" cy="12" r="1" />
-      <circle cx="5" cy="12" r="1" />
-    </svg>
+      <Circle cx="12" cy="12" r="1" />
+      <Circle cx="19" cy="12" r="1" />
+      <Circle cx="5" cy="12" r="1" />
+    </Svg>
   );
 });
 

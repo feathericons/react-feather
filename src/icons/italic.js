@@ -1,9 +1,12 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Line,
+} from 'svgs';
 
 const Italic = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +19,10 @@ const Italic = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeLinejoin="round"
       {...rest}
     >
-      <line x1="19" y1="4" x2="10" y2="4" />
-      <line x1="14" y1="20" x2="5" y2="20" />
-      <line x1="15" y1="4" x2="9" y2="20" />
-    </svg>
+      <Line x1="19" y1="4" x2="10" y2="4" />
+      <Line x1="14" y1="20" x2="5" y2="20" />
+      <Line x1="15" y1="4" x2="9" y2="20" />
+    </Svg>
   );
 });
 

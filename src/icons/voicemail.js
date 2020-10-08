@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Line,
+} from 'svgs';
 
 const Voicemail = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +20,10 @@ const Voicemail = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeLinejoin="round"
       {...rest}
     >
-      <circle cx="5.5" cy="11.5" r="4.5" />
-      <circle cx="18.5" cy="11.5" r="4.5" />
-      <line x1="5.5" y1="16" x2="18.5" y2="16" />
-    </svg>
+      <Circle cx="5.5" cy="11.5" r="4.5" />
+      <Circle cx="18.5" cy="11.5" r="4.5" />
+      <Line x1="5.5" y1="16" x2="18.5" y2="16" />
+    </Svg>
   );
 });
 

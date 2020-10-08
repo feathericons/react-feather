@@ -1,9 +1,14 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Line,
+  Path,
+} from 'svgs';
 
 const Anchor = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,10 +21,10 @@ const Anchor = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeLinejoin="round"
       {...rest}
     >
-      <circle cx="12" cy="5" r="3" />
-      <line x1="12" y1="22" x2="12" y2="8" />
-      <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
-    </svg>
+      <Circle cx="12" cy="5" r="3" />
+      <Line x1="12" y1="22" x2="12" y2="8" />
+      <Path d="M5 12H2a10 10 0 0 0 20 0h-3" />
+    </Svg>
   );
 });
 

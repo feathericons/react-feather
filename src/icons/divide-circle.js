@@ -1,9 +1,13 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import Svg, {
+  Circle,
+  Line,
+} from 'svgs';
 
 const DivideCircle = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
   return (
-    <svg
+    <Svg
       ref={ref}
       xmlns="http://www.w3.org/2000/svg"
       width={size}
@@ -16,11 +20,11 @@ const DivideCircle = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeLinejoin="round"
       {...rest}
     >
-      <line x1="8" y1="12" x2="16" y2="12" />
-      <line x1="12" y1="16" x2="12" y2="16" />
-      <line x1="12" y1="8" x2="12" y2="8" />
-      <circle cx="12" cy="12" r="10" />
-    </svg>
+      <Line x1="8" y1="12" x2="16" y2="12" />
+      <Line x1="12" y1="16" x2="12" y2="16" />
+      <Line x1="12" y1="8" x2="12" y2="8" />
+      <Circle cx="12" cy="12" r="10" />
+    </Svg>
   );
 });
 
