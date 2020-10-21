@@ -6,7 +6,7 @@ export interface IconProps extends SVGAttributes<SVGElement> {
   size?: string | number;
 }
 
-type Icon = FC<IconProps>;
+export type Icon = FC<IconProps>;
 export const Activity: Icon;
 export const Airplay: Icon;
 export const AlertCircle: Icon;
