@@ -14,6 +14,7 @@ const ShoppingCart = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-shopping-cart"
       {...rest}
     >
       <circle cx="9" cy="21" r="1" />

@@ -14,6 +14,7 @@ const ShoppingBag = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-shopping-bag"
       {...rest}
     >
       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />

@@ -14,6 +14,7 @@ const Smartphone = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-smartphone"
       {...rest}
     >
       <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />

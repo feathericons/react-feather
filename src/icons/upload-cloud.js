@@ -14,6 +14,7 @@ const UploadCloud = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-upload-cloud"
       {...rest}
     >
       <polyline points="16 16 12 12 8 16" />

@@ -14,6 +14,7 @@ const X = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-x"
       {...rest}
     >
       <line x1="18" y1="6" x2="6" y2="18" />

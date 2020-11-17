@@ -14,6 +14,7 @@ const RotateCcw = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-rotate-ccw"
       {...rest}
     >
       <polyline points="1 4 1 10 7 10" />

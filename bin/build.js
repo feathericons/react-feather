@@ -59,7 +59,8 @@ icons.forEach((i) => {
     strokeWidth: 2,
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
-    rest: '...rest',
+    className: `feather feather-${i}`,
+    rest: '...rest'
   };
 
   const element = `

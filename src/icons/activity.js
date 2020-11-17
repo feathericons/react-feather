@@ -14,6 +14,7 @@ const Activity = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-activity"
       {...rest}
     >
       <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />

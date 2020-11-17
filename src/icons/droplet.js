@@ -14,6 +14,7 @@ const Droplet = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-droplet"
       {...rest}
     >
       <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />

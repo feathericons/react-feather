@@ -14,6 +14,7 @@ const Printer = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-printer"
       {...rest}
     >
       <polyline points="6 9 6 2 18 2 18 9" />

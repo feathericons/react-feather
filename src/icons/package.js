@@ -14,6 +14,7 @@ const Package = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-package"
       {...rest}
     >
       <line x1="16.5" y1="9.4" x2="7.5" y2="4.21" />

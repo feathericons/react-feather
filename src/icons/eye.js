@@ -14,6 +14,7 @@ const Eye = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-eye"
       {...rest}
     >
       <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />

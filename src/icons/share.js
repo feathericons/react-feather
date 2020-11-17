@@ -14,6 +14,7 @@ const Share = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-share"
       {...rest}
     >
       <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />

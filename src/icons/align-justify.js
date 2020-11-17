@@ -14,6 +14,7 @@ const AlignJustify = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-align-justify"
       {...rest}
     >
       <line x1="21" y1="10" x2="3" y2="10" />

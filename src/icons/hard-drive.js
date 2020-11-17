@@ -14,6 +14,7 @@ const HardDrive = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-hard-drive"
       {...rest}
     >
       <line x1="22" y1="12" x2="2" y2="12" />

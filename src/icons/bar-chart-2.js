@@ -14,6 +14,7 @@ const BarChart2 = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-bar-chart-2"
       {...rest}
     >
       <line x1="18" y1="20" x2="18" y2="10" />

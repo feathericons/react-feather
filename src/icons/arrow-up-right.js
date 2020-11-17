@@ -14,6 +14,7 @@ const ArrowUpRight = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-arrow-up-right"
       {...rest}
     >
       <line x1="7" y1="17" x2="17" y2="7" />

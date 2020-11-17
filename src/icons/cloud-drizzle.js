@@ -14,6 +14,7 @@ const CloudDrizzle = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-cloud-drizzle"
       {...rest}
     >
       <line x1="8" y1="19" x2="8" y2="21" />

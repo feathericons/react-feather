@@ -14,6 +14,7 @@ const Scissors = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-scissors"
       {...rest}
     >
       <circle cx="6" cy="6" r="3" />

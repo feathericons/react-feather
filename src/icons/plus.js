@@ -14,6 +14,7 @@ const Plus = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-plus"
       {...rest}
     >
       <line x1="12" y1="5" x2="12" y2="19" />

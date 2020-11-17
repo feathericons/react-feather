@@ -14,6 +14,7 @@ const CloudRain = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-cloud-rain"
       {...rest}
     >
       <line x1="16" y1="13" x2="16" y2="21" />

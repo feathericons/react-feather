@@ -14,6 +14,7 @@ const PlayCircle = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-play-circle"
       {...rest}
     >
       <circle cx="12" cy="12" r="10" />

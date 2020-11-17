@@ -14,6 +14,7 @@ const Tv = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-tv"
       {...rest}
     >
       <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />

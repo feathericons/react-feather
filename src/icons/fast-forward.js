@@ -14,6 +14,7 @@ const FastForward = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-fast-forward"
       {...rest}
     >
       <polygon points="13 19 22 12 13 5 13 19" />

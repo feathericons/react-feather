@@ -14,6 +14,7 @@ const Briefcase = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-briefcase"
       {...rest}
     >
       <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />

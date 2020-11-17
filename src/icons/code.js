@@ -14,6 +14,7 @@ const Code = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-code"
       {...rest}
     >
       <polyline points="16 18 22 12 16 6" />

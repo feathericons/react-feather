@@ -14,6 +14,7 @@ const Calendar = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-calendar"
       {...rest}
     >
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />

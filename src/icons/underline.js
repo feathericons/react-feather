@@ -14,6 +14,7 @@ const Underline = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-underline"
       {...rest}
     >
       <path d="M6 3v7a6 6 0 0 0 6 6 6 6 0 0 0 6-6V3" />

@@ -14,6 +14,7 @@ const Truck = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-truck"
       {...rest}
     >
       <rect x="1" y="3" width="15" height="13" />

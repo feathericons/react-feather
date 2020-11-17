@@ -14,6 +14,7 @@ const ChevronsUp = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-chevrons-up"
       {...rest}
     >
       <polyline points="17 11 12 6 7 11" />

@@ -14,6 +14,7 @@ const Rss = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-rss"
       {...rest}
     >
       <path d="M4 11a9 9 0 0 1 9 9" />

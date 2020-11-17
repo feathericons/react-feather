@@ -14,6 +14,7 @@ const Trash = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-trash"
       {...rest}
     >
       <polyline points="3 6 5 6 21 6" />

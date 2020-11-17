@@ -14,6 +14,7 @@ const Headphones = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-headphones"
       {...rest}
     >
       <path d="M3 18v-6a9 9 0 0 1 18 0v6" />

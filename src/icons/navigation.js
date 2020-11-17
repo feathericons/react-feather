@@ -14,6 +14,7 @@ const Navigation = forwardRef(({ color = 'currentColor', size = 24, ...rest }, r
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-navigation"
       {...rest}
     >
       <polygon points="3 11 22 2 13 21 11 13 3 11" />

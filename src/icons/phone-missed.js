@@ -14,6 +14,7 @@ const PhoneMissed = forwardRef(({ color = 'currentColor', size = 24, ...rest }, 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-phone-missed"
       {...rest}
     >
       <line x1="23" y1="1" x2="17" y2="7" />

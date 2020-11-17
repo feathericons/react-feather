@@ -14,6 +14,7 @@ const Shuffle = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-shuffle"
       {...rest}
     >
       <polyline points="16 3 21 3 21 8" />

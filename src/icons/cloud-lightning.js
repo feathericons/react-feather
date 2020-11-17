@@ -14,6 +14,7 @@ const CloudLightning = forwardRef(({ color = 'currentColor', size = 24, ...rest 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-cloud-lightning"
       {...rest}
     >
       <path d="M19 16.9A5 5 0 0 0 18 7h-1.26a8 8 0 1 0-11.62 9" />

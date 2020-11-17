@@ -14,6 +14,7 @@ const Sunset = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-sunset"
       {...rest}
     >
       <path d="M17 18a5 5 0 0 0-10 0" />

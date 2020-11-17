@@ -14,6 +14,7 @@ const Hash = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-hash"
       {...rest}
     >
       <line x1="4" y1="9" x2="20" y2="9" />

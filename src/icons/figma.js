@@ -14,6 +14,7 @@ const Figma = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-figma"
       {...rest}
     >
       <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />

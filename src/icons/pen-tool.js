@@ -14,6 +14,7 @@ const PenTool = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-pen-tool"
       {...rest}
     >
       <path d="M12 19l7-7 3 3-7 7-3-3z" />

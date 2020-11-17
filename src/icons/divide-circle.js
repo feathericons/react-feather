@@ -14,6 +14,7 @@ const DivideCircle = forwardRef(({ color = 'currentColor', size = 24, ...rest },
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-divide-circle"
       {...rest}
     >
       <line x1="8" y1="12" x2="16" y2="12" />

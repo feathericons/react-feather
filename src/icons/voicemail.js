@@ -14,6 +14,7 @@ const Voicemail = forwardRef(({ color = 'currentColor', size = 24, ...rest }, re
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-voicemail"
       {...rest}
     >
       <circle cx="5.5" cy="11.5" r="4.5" />

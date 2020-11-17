@@ -14,6 +14,7 @@ const ZoomOut = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref)
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-zoom-out"
       {...rest}
     >
       <circle cx="11" cy="11" r="8" />

@@ -14,6 +14,7 @@ const BookOpen = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-book-open"
       {...rest}
     >
       <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />

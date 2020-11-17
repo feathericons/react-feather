@@ -14,6 +14,7 @@ const Umbrella = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-umbrella"
       {...rest}
     >
       <path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7" />

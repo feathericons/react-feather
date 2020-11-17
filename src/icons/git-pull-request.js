@@ -14,6 +14,7 @@ const GitPullRequest = forwardRef(({ color = 'currentColor', size = 24, ...rest 
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-git-pull-request"
       {...rest}
     >
       <circle cx="18" cy="18" r="3" />

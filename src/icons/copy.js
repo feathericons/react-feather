@@ -14,6 +14,7 @@ const Copy = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) =>
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-copy"
       {...rest}
     >
       <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />

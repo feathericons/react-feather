@@ -14,6 +14,7 @@ const Terminal = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      className="feather feather-terminal"
       {...rest}
     >
       <polyline points="4 17 10 11 4 5" />
