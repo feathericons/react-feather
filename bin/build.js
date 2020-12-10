@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const format = require('prettier-eslint');
 const upperCamelCase = require('uppercamelcase');
-const featherIcons = require('feather-icons/dist/icons.json');
+const featherIcons = require('@kontentino/feather-icons/dist/icons.json');
 
 const rootDir = path.join(__dirname, '..');
 
