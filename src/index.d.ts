@@ -1,12 +1,13 @@
 /// <reference types="react" />
-import { ForwardRefRenderFunction, SVGAttributes } from 'react';
+import { FC, RefObject, SVGAttributes } from 'react';
 
 export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
   size?: string | number;
+  ref?: RefObject<SVGElement>;
 }
 
-export type Icon = ForwardRefRenderFunction<SVGElement, IconProps>;
+export type Icon = FC<IconProps>;
 export const Activity: Icon;
 export const Airplay: Icon;
 export const AlertCircle: Icon;
