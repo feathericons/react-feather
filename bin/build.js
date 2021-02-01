@@ -31,24 +31,26 @@ fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
 fs.writeFileSync(
   path.join(rootDir, 'src', 'index.d.ts'),
   initialTypeDefinitions,
-  'utf-8',
+  'utf-8'
 );
 
-const attrsToString = (attrs) => {
-  return Object.keys(attrs).map((key) => {
-    if (key === 'width' || key === 'height' || key === 'stroke') {
-      return key + '={' + attrs[key] + '}';
-    }
-    if (key === 'rest') {
-      return '{...rest}';
-    }
-    return key + '="' + attrs[key] + '"';
-  }).join(' ');
+const attrsToString = attrs => {
+  return Object.keys(attrs)
+    .map(key => {
+      if (key === 'width' || key === 'height' || key === 'stroke') {
+        return key + '={' + attrs[key] + '}';
+      }
+      if (key === 'rest') {
+        return '{...rest}';
+      }
+      return key + '="' + attrs[key] + '"';
+    })
+    .join(' ');
 };
 
-icons.forEach((i) => {
-  const location = path.join(rootDir, 'src/icons', `${i}.js`);
-  const ComponentName = (i === 'github') ? 'GitHub' : upperCamelCase(i);
+icons.forEach(icon => {
+  const location = path.join(rootDir, 'src/icons', `${icon}.js`);
+  const ComponentName = icon === 'github' ? 'GitHub' : upperCamelCase(icon);
   const defaultAttrs = {
     xmlns: 'http://www.w3.org/2000/svg',
     width: 'size',
@@ -69,7 +71,7 @@ icons.forEach((i) => {
     const ${ComponentName} = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
       return (
         <svg ref={ref} ${attrsToString(defaultAttrs)}>
-          ${featherIcons[i]}
+          ${featherIcons[icon]}
         </svg>
       )
     });
@@ -103,17 +105,29 @@ icons.forEach((i) => {
 
   console.log('Successfully built', ComponentName);
 
-  const exportString = `export { default as ${ComponentName} } from './icons/${i}';\r\n`;
+  const exportString = `export { default as ${ComponentName} } from './icons/${icon}';\r\n`;
   fs.appendFileSync(
     path.join(rootDir, 'src', 'index.js'),
     exportString,
-    'utf-8',
+    'utf-8'
   );
 
   const exportTypeString = `export const ${ComponentName}: Icon;\n`;
   fs.appendFileSync(
     path.join(rootDir, 'src', 'index.d.ts'),
     exportTypeString,
-    'utf-8',
+    'utf-8'
+  );
+
+  const iconTypeDefinition = `import { Icon as IconType } from '../';
+
+declare const Icon: IconType
+
+export default Icon;  
+`;
+  fs.writeFileSync(
+    path.join(rootDir, 'src/icons', `${icon}.d.ts`),
+    iconTypeDefinition,
+    'utf-8'
   );
 });
