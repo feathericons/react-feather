@@ -239,6 +239,7 @@ export { default as Terminal } from './icons/terminal';
 export { default as Thermometer } from './icons/thermometer';
 export { default as ThumbsDown } from './icons/thumbs-down';
 export { default as ThumbsUp } from './icons/thumbs-up';
+export { default as Tiktok } from './icons/tiktok';
 export { default as ToggleLeft } from './icons/toggle-left';
 export { default as ToggleRight } from './icons/toggle-right';
 export { default as Tool } from './icons/tool';
@@ -284,3 +285,4 @@ export { default as ZapOff } from './icons/zap-off';
 export { default as Zap } from './icons/zap';
 export { default as ZoomIn } from './icons/zoom-in';
 export { default as ZoomOut } from './icons/zoom-out';
+
