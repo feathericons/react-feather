@@ -56,7 +56,7 @@
     "uppercamelcase": "^3.0.0"
   },
   "peerDependencies": {
-    "react": "^16.8.6 || ^17"
+    "react": "^16.8.6 || ^17 || ^18"
   },
   "dependencies": {
     "prop-types": "^15.7.2"
