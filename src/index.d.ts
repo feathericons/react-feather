@@ -241,6 +241,7 @@ export const StopCircle: Icon;
 export const Sun: Icon;
 export const Sunrise: Icon;
 export const Sunset: Icon;
+export const Table: Icon;
 export const Tablet: Icon;
 export const Tag: Icon;
 export const Target: Icon;

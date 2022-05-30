@@ -232,6 +232,7 @@ export { default as StopCircle } from './icons/stop-circle';
 export { default as Sun } from './icons/sun';
 export { default as Sunrise } from './icons/sunrise';
 export { default as Sunset } from './icons/sunset';
+export { default as Table } from './icons/table';
 export { default as Tablet } from './icons/tablet';
 export { default as Tag } from './icons/tag';
 export { default as Target } from './icons/target';
