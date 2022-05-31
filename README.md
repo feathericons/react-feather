@@ -6,7 +6,7 @@
 #### What is react-feather?
 react-feather is a collection of simply beautiful open source icons for React.js. Each icon is designed on a 24x24 grid with an emphasis on simplicity, consistency and readability.
 
-#### Based on Feather Icons  ```v4.28.0```
+#### Based on Feather Icons  ```v4.29.0```
 https://feathericons.com/
 
 ### Installation
