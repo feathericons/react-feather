@@ -66,7 +66,7 @@ icons.forEach((i) => {
     import React, {forwardRef} from 'react';
     import PropTypes from 'prop-types';
 
-    const ${ComponentName} = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+    const ${ComponentName} = forwardRef(({ color = 'currentColor', size = 16, ...rest }, ref) => {
       return (
         <svg ref={ref} ${attrsToString(defaultAttrs)}>
           ${featherIcons[i]}
