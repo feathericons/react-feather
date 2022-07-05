@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const ShieldOff = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+const ShieldOff = forwardRef(({ color = 'currentColor', size = 16, ...rest }, ref) => {
   return (
     <svg
       ref={ref}

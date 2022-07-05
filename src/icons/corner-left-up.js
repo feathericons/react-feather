@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const CornerLeftUp = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+const CornerLeftUp = forwardRef(({ color = 'currentColor', size = 16, ...rest }, ref) => {
   return (
     <svg
       ref={ref}
