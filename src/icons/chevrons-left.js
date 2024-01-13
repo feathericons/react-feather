@@ -1,7 +1,11 @@
 import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import { useDefaultProps } from '../provider';
 
-const ChevronsLeft = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+const ChevronsLeft = forwardRef(({ color: colorFromProp, size: sizeFromProp, ...rest }, ref) => {
+  const { size: defaultSize, color: defaultColor } = useDefaultProps();
+  const size = sizeFromProp || defaultSize;
+  const color = colorFromProp || defaultColor;
   return (
     <svg
       ref={ref}

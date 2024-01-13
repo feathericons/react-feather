@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { FC, SVGAttributes } from 'react';
+import { FC, SVGAttributes, PropsWithChildren } from 'react';
 
 export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
@@ -7,6 +7,8 @@ export interface IconProps extends SVGAttributes<SVGElement> {
 }
 
 export type Icon = FC<IconProps>;
+export type FeatherIconProvider = FC<PropsWithChildren<IconProps>>
+;
 export const Activity: Icon;
 export const Airplay: Icon;
 export const AlertCircle: Icon;
