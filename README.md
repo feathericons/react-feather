@@ -58,3 +58,19 @@ const App = () => {
 
 export default App;
 ```
+Icons can be configured with Provider:
+
+```jsx
+import React from 'react';
+import { FeatherIconProvider, Camera } from 'react-feather-icon';
+
+const App = () => {
+  return (
+    <FeatherIconProvider color="red" size={48}>
+      <Camera />
+    </FeatherIconProvider>
+  );
+};
+
+export default App;
+```

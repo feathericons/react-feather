@@ -17,7 +17,7 @@ if (!fs.existsSync(dir)) {
 }
 
 const initialTypeDefinitions = `/// <reference types="react" />
-import { FC, SVGAttributes } from 'react';
+import { FC, SVGAttributes, PropsWithChildren } from 'react';
 
 export interface IconProps extends SVGAttributes<SVGElement> {
   color?: string;
@@ -25,12 +25,48 @@ export interface IconProps extends SVGAttributes<SVGElement> {
 }
 
 export type Icon = FC<IconProps>;
+export type FeatherIconProvider = FC<PropsWithChildren<IconProps>>\r\n;
 `;
 
-fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), '', 'utf-8');
+const Provider = `
+import React from "react";
+
+const defaultValues = {
+  size: 24,
+  color: "currentColor",
+};
+const FeatherIconContext = React.createContext(defaultValues);
+
+const FeatherIconProvider = ({
+  children,
+  size = defaultValues.size,
+  color = defaultValues.color,
+}) => {
+  return (
+    <FeatherIconContext.Provider value={{ size, color }}>
+      {children}
+    </FeatherIconContext.Provider>
+  );
+};
+
+export const useDefaultProps = () => {
+  const { size, color } = React.useContext(FeatherIconContext) || defaultValues;
+  return { size, color };
+};
+
+export default FeatherIconProvider;
+`
+const providerExportString = `export { default as FeatherIconProvider } from './provider';\r\n`;
+
+fs.writeFileSync(path.join(rootDir, 'src', 'index.js'), providerExportString, 'utf-8');
 fs.writeFileSync(
   path.join(rootDir, 'src', 'index.d.ts'),
   initialTypeDefinitions,
+  'utf-8',
+);
+fs.writeFileSync(
+  path.join(rootDir, 'src', 'provider.js'),
+  Provider,
   'utf-8',
 );
 
@@ -46,7 +82,8 @@ const attrsToString = (attrs) => {
   }).join(' ');
 };
 
-icons.forEach((i) => {
+Promise.all(
+icons.map(async (i) => {
   const location = path.join(rootDir, 'src/icons', `${i}.js`);
   const ComponentName = (i === 'github') ? 'GitHub' : upperCamelCase(i);
   const defaultAttrs = {
@@ -65,8 +102,12 @@ icons.forEach((i) => {
   const element = `
     import React, {forwardRef} from 'react';
     import PropTypes from 'prop-types';
+    import { useDefaultProps } from '../provider';
 
-    const ${ComponentName} = forwardRef(({ color = 'currentColor', size = 24, ...rest }, ref) => {
+    const ${ComponentName} = forwardRef(({ color: colorFromProp, size: sizeFromProp, ...rest }, ref) => {
+      const { size: defaultSize, color: defaultColor } = useDefaultProps();
+      const size = sizeFromProp || defaultSize;
+      const color = colorFromProp || defaultColor;
       return (
         <svg ref={ref} ${attrsToString(defaultAttrs)}>
           ${featherIcons[i]}
@@ -98,7 +139,7 @@ icons.forEach((i) => {
       parser: 'flow',
     },
   });
-
+  
   fs.writeFileSync(location, component, 'utf-8');
 
   console.log('Successfully built', ComponentName);
@@ -116,4 +157,4 @@ icons.forEach((i) => {
     exportTypeString,
     'utf-8',
   );
-});
+}));

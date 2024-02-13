@@ -1,3 +1,4 @@
+export { default as FeatherIconProvider } from './provider';
 export { default as Activity } from './icons/activity';
 export { default as Airplay } from './icons/airplay';
 export { default as AlertCircle } from './icons/alert-circle';
